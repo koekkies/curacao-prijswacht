@@ -64,8 +64,37 @@ def action(page):
             pass
     page.wait_for_timeout(1000)
     info["select2"] = page.evaluate("() => [...document.querySelectorAll('.select2-container')].map(e=>e.outerHTML.slice(0,300))")
+    def pick(idx, pattern, label):
+        page.locator(".select2-container").nth(idx).click(timeout=8000)
+        page.wait_for_timeout(1200)
+        srch = page.locator(".select2-container--open .select2-search__field")
+        if srch.count():
+            srch.first.fill(pattern)
+            page.wait_for_timeout(1200)
+        opts = page.locator(".select2-container--open li.select2-results__option")
+        info["steps"].append({label + "_opts": opts.all_inner_texts()[:20]})
+        opts.filter(has_text=re.compile(pattern, re.I)).first.click(timeout=8000)
+        page.wait_for_timeout(2500)
+
+    for _ in range(2):
+        for txt in ("Accept All", "Reject All"):
+            try:
+                b = page.get_by_role("button", name=txt, exact=True)
+                if b.count() and b.first.is_visible():
+                    b.first.click(timeout=3000)
+            except Exception:
+                pass
+        page.wait_for_timeout(1500)
+    try:
+        pick(0, "Amsterdam", "origin")
+        info["steps"].append({"dest_disabled": page.evaluate("() => document.querySelector('#destination').disabled")})
+    except Exception as e:
+        info["steps"].append({"origin": f"fout {e}"})
     # bestemming: select2 openen en Curaçao kiezen
     try:
+        pick(1, "Cura", "dest")
+        raise StopIteration
+
         cont = page.locator("#destination ~ .select2-container, #destination + span").first
         if not cont.count():
             cont = page.locator(".select2-container").nth(1)
@@ -76,6 +105,8 @@ def action(page):
         info["steps"].append({"dest_options": opts.all_inner_texts()[:60]})
         page.locator("li.select2-results__option", has_text=re.compile("Cura", re.I)).first.click(timeout=8000)
         page.wait_for_timeout(2500)
+        info["steps"].append({"dest_val": page.evaluate("() => document.querySelector('#destination').value")})
+    except StopIteration:
         info["steps"].append({"dest_val": page.evaluate("() => document.querySelector('#destination').value")})
     except Exception as e:
         info["steps"].append({"dest": f"fout {e}"})
@@ -90,11 +121,10 @@ def action(page):
         # naar de juiste maand bladeren en de dag kiezen
         target_month = os.environ.get("COR_MONTH", "December 2026")
         for _ in range(14):
-            body = page.inner_text("body")
-            if re.search(target_month, body, re.I):
+            m = page.locator(".daterangepicker th.month").first.inner_text()
+            if re.search(target_month, m, re.I):
                 break
-            nxt = page.locator("[class*=next]:visible").first
-            nxt.click(timeout=3000)
+            page.locator(".daterangepicker th.next").first.click(timeout=3000)
             page.wait_for_timeout(600)
         shot("4_cal_month")
         day = os.environ.get("COR_DAY", "18")
