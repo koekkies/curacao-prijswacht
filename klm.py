@@ -91,7 +91,12 @@ def klm_scan(trip_type: str, out: date, ret: date | None, flex: int, pax: int = 
     dbg = OUT_DIR / "tui_debug"
     dbg.mkdir(parents=True, exist_ok=True)
     with StealthySession(headless=headless) as s:
+        fails = 0
         for n, d in enumerate(days):
+            if fails >= 2:
+                log.append(f"KLM {d}: overgeslagen (KLM blokkeert deze server)")
+                print(log[-1], flush=True)
+                continue
             if n:
                 time.sleep(int(os.environ.get("KLM_PAUSE", "25")))
             r = d + timedelta(days=nights) if trip_type == "round_trip" else None
@@ -107,7 +112,12 @@ def klm_scan(trip_type: str, out: date, ret: date | None, flex: int, pax: int = 
                         pass
                 page.on("response", on_resp)
                 clicked = False
-                for i in range(75):
+                for i in range(80):
+                    if i == 45 and not got["payload"]:
+                        try:
+                            page.reload(timeout=60000)
+                        except Exception:
+                            pass
                     if got["payload"]:
                         break
                     if not clicked and i < 20:
@@ -135,6 +145,7 @@ def klm_scan(trip_type: str, out: date, ret: date | None, flex: int, pax: int = 
                 flights.extend(fl)
                 if fl:
                     per_day[d.isoformat()] = min(f["price"] for f in fl)
+                fails = 0 if got["payload"] else fails + 1
                 log.append(f"KLM {d}{' → ' + r.isoformat() if r else ''}: "
                            f"{len(fl)} vluchten" + ("" if got["payload"] else " (geen antwoord van KLM)"))
             except Exception as e:
