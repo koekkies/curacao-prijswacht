@@ -53,9 +53,23 @@ def action(page):
             page.screenshot(path=str(OUT / f"cor_{n}.png"))
         except Exception:
             pass
+    page.wait_for_timeout(3000)
+    for txt in ("Accept All", "Reject All"):
+        try:
+            b = page.get_by_role("button", name=txt)
+            if b.count():
+                b.first.click(timeout=3000)
+                break
+        except Exception:
+            pass
+    page.wait_for_timeout(1000)
+    info["select2"] = page.evaluate("() => [...document.querySelectorAll('.select2-container')].map(e=>e.outerHTML.slice(0,300))")
     # bestemming: select2 openen en Curaçao kiezen
     try:
-        page.locator("#destination").locator("xpath=following-sibling::span[contains(@class,'select2')]").first.click(timeout=8000)
+        cont = page.locator("#destination ~ .select2-container, #destination + span").first
+        if not cont.count():
+            cont = page.locator(".select2-container").nth(1)
+        cont.click(timeout=8000)
         page.wait_for_timeout(1500)
         shot("1_dest_open")
         opts = page.locator("li.select2-results__option")
@@ -68,7 +82,7 @@ def action(page):
     shot("2_dest_done")
     # kalender
     try:
-        page.click("#departureDate", timeout=8000)
+        page.locator(".add-date-wrapper, .date-place-holder").first.click(timeout=8000)
         page.wait_for_timeout(2000)
         shot("3_cal_open")
         info["cal_html"] = page.evaluate("""() => { const c=[...document.querySelectorAll('[class*=datepicker],[class*=calendar],[class*=flatpickr],[class*=daterange]')]
