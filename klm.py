@@ -83,11 +83,16 @@ def klm_scan(trip_type: str, out: date, ret: date | None, flex: int, pax: int = 
 
     headless = os.environ.get("HEADFUL", "") != "1"
     nights = (ret - out).days if ret else (14 if trip_type == "round_trip" else None)
-    days = [d for d in (out + timedelta(days=i) for i in range(-flex, flex + 1)) if d > date.today()]
+    # jouw datum eerst, daarna afwisselend er net voor en net na
+    order = [0] + [x for i in range(1, flex + 1) for x in (-i, i)]
+    days = [out + timedelta(days=i) for i in order if out + timedelta(days=i) > date.today()]
     flights, per_day, log = [], {}, []
 
-    with StealthySession(headless=headless) as s:
-        for d in days:
+    for n, d in enumerate(days):
+      if n:
+          time.sleep(int(os.environ.get("KLM_PAUSE", "20")))
+      with StealthySession(headless=headless) as s:  # nieuwe browser per datum
+        if True:
             r = d + timedelta(days=nights) if trip_type == "round_trip" else None
             url = offers_url(d, r, pax)
             got = {"payload": None}
@@ -126,7 +131,6 @@ def klm_scan(trip_type: str, out: date, ret: date | None, flex: int, pax: int = 
             except Exception as e:
                 log.append(f"KLM {d}: fout {type(e).__name__}: {e}")
             print(log[-1], flush=True)
-            time.sleep(4)
 
     seen, uniq = set(), []
     for f in sorted(flights, key=lambda x: (x["price"], x["out"], x["dep_time"])):

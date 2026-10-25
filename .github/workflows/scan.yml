@@ -28,7 +28,7 @@ concurrency:
 jobs:
   scan:
     runs-on: ubuntu-latest
-    timeout-minutes: 35
+    timeout-minutes: 50
     steps:
       - uses: actions/checkout@v4
 
@@ -67,8 +67,14 @@ jobs:
             echo "flex=$(jq -r '.flex_days // 3' settings.json)" >> $GITHUB_OUTPUT
           fi
 
+      - name: Virtueel scherm (voor KLM)
+        run: sudo apt-get install -y -qq xvfb > /dev/null
+
       - name: Vluchten ophalen
+        env:
+          HEADFUL: "1"
         run: >
+          xvfb-run -a --server-args="-screen 0 1920x1080x24"
           python scan.py
           --type "${{ steps.cfg.outputs.type }}"
           --out "${{ steps.cfg.outputs.out }}"

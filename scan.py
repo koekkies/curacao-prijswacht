@@ -184,6 +184,15 @@ def main():
     except Exception as e:
         log.append(f"Corendon mislukt: {type(e).__name__}: {e}")
         print(log[-1], flush=True)
+    klm_per_day = {}
+    try:  # rechtstreeks bij KLM (zichtbare browser via xvfb)
+        from klm import klm_scan
+        klm_flights, klm_per_day, klm_log = klm_scan(a.type, out, ret, flex, a.pax)
+        flights.extend(klm_flights)
+        log.extend(klm_log)
+    except Exception as e:
+        log.append(f"KLM mislukt: {type(e).__name__}: {e}")
+        print(log[-1], flush=True)
     flights = [f for f in flights if f.get("price")]
     flights.sort(key=lambda f: (f["price"], f["out"]))
     OUT_DIR.mkdir(exist_ok=True)
@@ -194,6 +203,7 @@ def main():
         "flights": flights,
         "tui_per_day": tui_per_day,
         "corendon_per_day": cor_per_day,
+        "klm_per_day": klm_per_day,
         "log": log,
     }
     (OUT_DIR / "latest.json").write_text(json.dumps(result, ensure_ascii=False, indent=1), encoding="utf-8")
