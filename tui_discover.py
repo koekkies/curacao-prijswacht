@@ -28,8 +28,8 @@ def make_action(name):
                 ct = r.headers.get("content-type", "")
                 if "json" in ct and r.request.resource_type in ("xhr", "fetch"):
                     body = r.text()
-                    if re.search(r"(price|prijs|amount|fare|offer)", body, re.I):
-                        resp.append({"u": r.url, "status": r.status, "body": body[:20000]})
+                    if "gql" in r.url or "graphql" in r.url or re.search(r"(price|prijs|amount|fare|offer)", body, re.I):
+                        resp.append({"u": r.url, "status": r.status, "body": body[:60000]})
             except Exception:
                 pass
 
@@ -48,7 +48,17 @@ def make_action(name):
             page.reload(wait_until="networkidle", timeout=45000)
         except Exception:
             pass
-        page.wait_for_timeout(9000)
+        page.wait_for_timeout(int(os.environ.get("WAIT_MS", "9000")))
+        for txt in (os.environ.get("CLICK", "") or "").split("|"):
+            if not txt:
+                continue
+            try:
+                b = page.get_by_role("button", name=re.compile(txt, re.I))
+                if b.count():
+                    b.first.click(timeout=5000)
+                    page.wait_for_timeout(int(os.environ.get("WAIT_MS", "9000")))
+            except Exception:
+                pass
         page.screenshot(path=str(OUT / f"{name}.png"), full_page=False)
         info = page.evaluate("""() => {
           const pick = el => ({tag: el.tagName, type: el.type||'', name: el.name||'', id: el.id||'',
@@ -63,7 +73,7 @@ def make_action(name):
           };
         }""")
         info["requests"] = [r for r in reqs if r["t"] in ("xhr", "fetch", "document")][:200]
-        info["json_with_prices"] = resp[:20]
+        info["json_with_prices"] = resp[:40]
         net[name] = info
         return page
     return action
@@ -74,7 +84,7 @@ def main():
     with StealthySession(headless=True) as s:
         for name, url in CANDIDATES.items():
             try:
-                p = s.fetch(url, page_action=make_action(name), network_idle=True, timeout=90000)
+                p = s.fetch(url, page_action=make_action(name), network_idle=True, timeout=120000, solve_cloudflare=True)
                 (OUT / f"{name}.html").write_text(str(p.html_content), encoding="utf-8")
                 print(name, "->", net.get(name, {}).get("url"), net.get(name, {}).get("title"), flush=True)
             except Exception as e:
