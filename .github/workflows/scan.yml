@@ -1,14 +1,16 @@
 name: Prijzen ophalen
 
 on:
+  schedule:
+    - cron: "20 * * * *"
   workflow_dispatch:
     inputs:
       trip_type:
         description: "round_trip of one_way"
         default: "round_trip"
       out_date:
-        description: "Heendatum YYYY-MM-DD"
-        required: true
+        description: "Heendatum YYYY-MM-DD (leeg = settings.json)"
+        default: ""
       ret_date:
         description: "Terugdatum YYYY-MM-DD (leeg bij enkele reis)"
         default: ""
@@ -50,13 +52,28 @@ jobs:
       - name: Browser installeren
         run: scrapling install
 
+      - name: Instellingen bepalen
+        id: cfg
+        run: |
+          if [ -n "${{ inputs.out_date }}" ]; then
+            echo "type=${{ inputs.trip_type }}" >> $GITHUB_OUTPUT
+            echo "out=${{ inputs.out_date }}" >> $GITHUB_OUTPUT
+            echo "ret=${{ inputs.ret_date }}" >> $GITHUB_OUTPUT
+            echo "flex=${{ inputs.flex_days }}" >> $GITHUB_OUTPUT
+          else
+            echo "type=$(jq -r .trip_type settings.json)" >> $GITHUB_OUTPUT
+            echo "out=$(jq -r .out_date settings.json)" >> $GITHUB_OUTPUT
+            echo "ret=$(jq -r '.ret_date // ""' settings.json)" >> $GITHUB_OUTPUT
+            echo "flex=$(jq -r '.flex_days // 3' settings.json)" >> $GITHUB_OUTPUT
+          fi
+
       - name: Vluchten ophalen
         run: >
           python scan.py
-          --type "${{ inputs.trip_type }}"
-          --out "${{ inputs.out_date }}"
-          --ret "${{ inputs.ret_date }}"
-          --flex "${{ inputs.flex_days }}"
+          --type "${{ steps.cfg.outputs.type }}"
+          --out "${{ steps.cfg.outputs.out }}"
+          --ret "${{ steps.cfg.outputs.ret }}"
+          --flex "${{ steps.cfg.outputs.flex }}"
 
       - name: Debug-pagina's bewaren
         if: always()
