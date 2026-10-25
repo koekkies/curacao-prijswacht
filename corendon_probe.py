@@ -48,21 +48,57 @@ def action(page):
         except Exception:
             pass
     page.wait_for_timeout(2000)
-    step("jquery", "() => typeof window.jQuery")
-    step("origin", "() => { const $=window.jQuery; $('#origin').val('AMS').trigger('change'); $('#origin').trigger({type:'select2:select', params:{data:{id:'AMS'}}}); return $('#origin').val(); }", 4000)
-    step("dest_opts", "() => [...document.querySelectorAll('#destination option')].map(o=>o.value+':'+o.textContent.trim()).slice(0,40)")
-    step("dest", "() => { const $=window.jQuery; $('#destination').prop('disabled',false).val('CUR').trigger('change'); $('#destination').trigger({type:'select2:select', params:{data:{id:'CUR'}}}); return $('#destination').val(); }", 3000)
-    step("date", f"""() => {{ const $=window.jQuery; const el=$('#departureDate');
-        try {{ el.datepicker('setDate', '{DATE}'); }} catch(e) {{}}
-        el.val('{DATE}').trigger('change'); return el.val(); }}""", 1500)
+    def shot(n):
+        try:
+            page.screenshot(path=str(OUT / f"cor_{n}.png"))
+        except Exception:
+            pass
+    # bestemming: select2 openen en Curaçao kiezen
+    try:
+        page.locator("#destination").locator("xpath=following-sibling::span[contains(@class,'select2')]").first.click(timeout=8000)
+        page.wait_for_timeout(1500)
+        shot("1_dest_open")
+        opts = page.locator("li.select2-results__option")
+        info["steps"].append({"dest_options": opts.all_inner_texts()[:60]})
+        page.locator("li.select2-results__option", has_text=re.compile("Cura", re.I)).first.click(timeout=8000)
+        page.wait_for_timeout(2500)
+        info["steps"].append({"dest_val": page.evaluate("() => document.querySelector('#destination').value")})
+    except Exception as e:
+        info["steps"].append({"dest": f"fout {e}"})
+    shot("2_dest_done")
+    # kalender
+    try:
+        page.click("#departureDate", timeout=8000)
+        page.wait_for_timeout(2000)
+        shot("3_cal_open")
+        info["cal_html"] = page.evaluate("""() => { const c=[...document.querySelectorAll('[class*=datepicker],[class*=calendar],[class*=flatpickr],[class*=daterange]')]
+            .filter(e=>e.offsetParent!==null).sort((a,b)=>b.innerHTML.length-a.innerHTML.length)[0]; return c? c.outerHTML.slice(0,6000):null; }""")
+        # naar de juiste maand bladeren en de dag kiezen
+        target_month = os.environ.get("COR_MONTH", "December 2026")
+        for _ in range(14):
+            body = page.inner_text("body")
+            if re.search(target_month, body, re.I):
+                break
+            nxt = page.locator("[class*=next]:visible").first
+            nxt.click(timeout=3000)
+            page.wait_for_timeout(600)
+        shot("4_cal_month")
+        day = os.environ.get("COR_DAY", "18")
+        cells = page.locator(f"td:visible:not(.disabled):not(.old):not(.new), [class*=day]:visible").filter(has_text=re.compile(rf"^\s*{day}\s*$"))
+        info["steps"].append({"day_cells": cells.count()})
+        cells.first.click(timeout=5000)
+        page.wait_for_timeout(1500)
+        info["steps"].append({"date_val": page.evaluate("() => document.querySelector('#departureDate').value")})
+    except Exception as e:
+        info["steps"].append({"cal": f"fout {e}"})
+    shot("5_date_done")
     step("oneway_state", "() => ({ret_disabled: document.querySelector('#returnDate').disabled, multi: document.querySelector('#is-multi-flight').checked})")
     page.screenshot(path=str(OUT / "cor_form.png"))
     try:
-        with page.expect_navigation(timeout=60000):
-            page.click("#search_flights")
+        page.click("#search_flights", timeout=8000)
     except Exception as e:
         info["steps"].append({"submit": f"{e}"})
-    page.wait_for_timeout(15000)
+    page.wait_for_timeout(25000)
     info["final_url"] = page.url
     info["title"] = page.title()
     info["prices"] = (re.findall(r"€\s?\d[\d.,]*", page.inner_text("body")) or [])[:60]
