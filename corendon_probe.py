@@ -73,7 +73,9 @@ def action(page):
             page.wait_for_timeout(1200)
         opts = page.locator(".select2-container--open li.select2-results__option")
         info["steps"].append({label + "_opts": opts.all_inner_texts()[:20]})
-        opts.filter(has_text=re.compile(pattern, re.I)).first.click(timeout=8000)
+        sel = page.locator(".select2-container--open li.select2-results__option[role=option]:not(.select2-results__option--group), .select2-container--open li[aria-selected]").filter(has_text=re.compile(pattern, re.I))
+        info["steps"].append({label + "_selectable": sel.count()})
+        (sel.last if sel.count() else opts.filter(has_text=re.compile(pattern, re.I)).last).click(timeout=8000)
         page.wait_for_timeout(2500)
 
     for _ in range(2):
@@ -87,7 +89,12 @@ def action(page):
         page.wait_for_timeout(1500)
     try:
         pick(0, "Amsterdam", "origin")
-        info["steps"].append({"dest_disabled": page.evaluate("() => document.querySelector('#destination').disabled")})
+        for _ in range(10):
+            if not page.evaluate("() => document.querySelector('#destination').disabled"):
+                break
+            page.wait_for_timeout(1000)
+        info["steps"].append({"origin_val": page.evaluate("() => document.querySelector('#origin').value"),
+                              "dest_disabled": page.evaluate("() => document.querySelector('#destination').disabled")})
     except Exception as e:
         info["steps"].append({"origin": f"fout {e}"})
     # bestemming: select2 openen en Curaçao kiezen
@@ -121,10 +128,10 @@ def action(page):
         # naar de juiste maand bladeren en de dag kiezen
         target_month = os.environ.get("COR_MONTH", "December 2026")
         for _ in range(14):
-            m = page.locator(".daterangepicker th.month").first.inner_text()
+            m = page.locator(".daterangepicker:visible th.month").first.inner_text()
             if re.search(target_month, m, re.I):
                 break
-            page.locator(".daterangepicker th.next").first.click(timeout=3000)
+            page.locator(".daterangepicker:visible th.next").first.click(timeout=3000)
             page.wait_for_timeout(600)
         shot("4_cal_month")
         day = os.environ.get("COR_DAY", "18")
