@@ -1,0 +1,78 @@
+name: Prijzen ophalen
+
+on:
+  workflow_dispatch:
+    inputs:
+      trip_type:
+        description: "round_trip of one_way"
+        default: "round_trip"
+      out_date:
+        description: "Heendatum YYYY-MM-DD"
+        required: true
+      ret_date:
+        description: "Terugdatum YYYY-MM-DD (leeg bij enkele reis)"
+        default: ""
+      flex_days:
+        description: "Speling in dagen (0-7)"
+        default: "3"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: scan
+  cancel-in-progress: false
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Scrapling installeren
+        run: pip install "scrapling[fetchers]" && pip show scrapling | head -2
+
+      - name: Browsers uit cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/ms-playwright
+            ~/.cache/camoufox
+            ~/.cache/patchright
+          key: browsers-${{ runner.os }}-v1
+
+      - name: Browser installeren
+        run: scrapling install
+
+      - name: Vluchten ophalen
+        run: >
+          python scan.py
+          --type "${{ inputs.trip_type }}"
+          --out "${{ inputs.out_date }}"
+          --ret "${{ inputs.ret_date }}"
+          --flex "${{ inputs.flex_days }}"
+
+      - name: Debug-pagina's bewaren
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: results
+          path: results/
+          retention-days: 3
+
+      - name: Resultaat opslaan in repo
+        if: always()
+        run: |
+          [ -f results/latest.json ] || exit 0
+          git config user.name "prijswacht-bot"
+          git config user.email "prijswacht-bot@users.noreply.github.com"
+          git add results/latest.json
+          git commit -m "Prijzen $(date -u +%Y-%m-%dT%H:%MZ)" || exit 0
+          git pull --rebase -X theirs origin "${GITHUB_REF_NAME}" || true
+          git push
