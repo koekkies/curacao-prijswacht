@@ -167,6 +167,16 @@ def main():
     except Exception as e:
         log.append(f"TUI mislukt: {type(e).__name__}: {e}")
         print(log[-1], flush=True)
+    cor_per_day = {}
+    try:  # rechtstreeks bij Corendon
+        from corendon import corendon_scan
+        cor_flights, cor_per_day, cor_log = corendon_scan(a.type, out, ret, flex)
+        flights.extend(cor_flights)
+        log.extend(cor_log)
+    except Exception as e:
+        log.append(f"Corendon mislukt: {type(e).__name__}: {e}")
+        print(log[-1], flush=True)
+    flights = [f for f in flights if f.get("price")]
     flights.sort(key=lambda f: (f["price"], f["out"]))
     OUT_DIR.mkdir(exist_ok=True)
     result = {
@@ -175,6 +185,7 @@ def main():
         "count": len(flights),
         "flights": flights,
         "tui_per_day": tui_per_day,
+        "corendon_per_day": cor_per_day,
         "log": log,
     }
     (OUT_DIR / "latest.json").write_text(json.dumps(result, ensure_ascii=False, indent=1), encoding="utf-8")
