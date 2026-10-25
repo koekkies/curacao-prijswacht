@@ -28,8 +28,12 @@ def action(page):
     page.on("response", on_resp)
 
     def step(name, js=None, wait=1500):
+        """js = '() => {...}'; draait in de hoofd-wereld via een scripttag, resultaat via data-attribuut."""
         try:
-            res = page.evaluate(js) if js else None
+            page.add_script_tag(content=f"""try {{ document.documentElement.setAttribute('data-probe', JSON.stringify(({js})())); }}
+                catch(e) {{ document.documentElement.setAttribute('data-probe', 'ERR '+e); }}""")
+            page.wait_for_timeout(300)
+            res = page.evaluate("() => document.documentElement.getAttribute('data-probe')")
             info["steps"].append({name: res})
         except Exception as e:
             info["steps"].append({name: f"fout {e}"})
