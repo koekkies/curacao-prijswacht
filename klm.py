@@ -88,11 +88,12 @@ def klm_scan(trip_type: str, out: date, ret: date | None, flex: int, pax: int = 
     days = [out + timedelta(days=i) for i in order if out + timedelta(days=i) > date.today()]
     flights, per_day, log = [], {}, []
 
-    for n, d in enumerate(days):
-      if n:
-          time.sleep(int(os.environ.get("KLM_PAUSE", "20")))
-      with StealthySession(headless=headless) as s:  # nieuwe browser per datum
-        if True:
+    dbg = OUT_DIR / "tui_debug"
+    dbg.mkdir(parents=True, exist_ok=True)
+    with StealthySession(headless=headless) as s:
+        for n, d in enumerate(days):
+            if n:
+                time.sleep(int(os.environ.get("KLM_PAUSE", "25")))
             r = d + timedelta(days=nights) if trip_type == "round_trip" else None
             url = offers_url(d, r, pax)
             got = {"payload": None}
@@ -105,18 +106,26 @@ def klm_scan(trip_type: str, out: date, ret: date | None, flex: int, pax: int = 
                     except Exception:
                         pass
                 page.on("response", on_resp)
-                for txt in ("Akkoord", "Accepteren", "Accept"):
-                    try:
-                        b = page.get_by_role("button", name=re.compile(txt, re.I))
-                        if b.count() and b.first.is_visible():
-                            b.first.click(timeout=3000)
-                            break
-                    except Exception:
-                        pass
-                for _ in range(60):
+                clicked = False
+                for i in range(75):
                     if got["payload"]:
                         break
+                    if not clicked and i < 20:
+                        for txt in ("Akkoord", "Accepteren", "Alles accepteren", "Accept"):
+                            try:
+                                b = page.get_by_role("button", name=re.compile(txt, re.I))
+                                if b.count() and b.first.is_visible():
+                                    b.first.click(timeout=3000)
+                                    clicked = True
+                                    break
+                            except Exception:
+                                pass
                     page.wait_for_timeout(1000)
+                if not got["payload"]:
+                    try:
+                        page.screenshot(path=str(dbg / f"klm_fail_{d.isoformat()}.png"))
+                    except Exception:
+                        pass
                 return page
 
             try:
