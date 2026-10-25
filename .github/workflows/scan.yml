@@ -1,8 +1,6 @@
 name: Prijzen ophalen
 
 on:
-  schedule:
-    - cron: "20 * * * *"
   workflow_dispatch:
     inputs:
       trip_type:

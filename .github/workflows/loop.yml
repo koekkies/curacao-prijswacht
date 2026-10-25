@@ -1,0 +1,74 @@
+name: Prijswacht (elk uur)
+
+# Draait ongeveer 5 uur lang elk uur een volledige scan en start zichzelf daarna opnieuw.
+# Zo hangt het niet af van GitHub's (onbetrouwbare) cron-planning.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: prijswacht-loop
+  cancel-in-progress: false
+
+jobs:
+  loop:
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - run: pip install -r requirements.txt
+
+      - uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/ms-playwright
+            ~/.cache/camoufox
+            ~/.cache/patchright
+          key: browsers-${{ runner.os }}-v1
+
+      - run: scrapling install
+
+      - run: sudo apt-get install -y -qq xvfb jq > /dev/null
+
+      - name: Elk uur scannen
+        env:
+          HEADFUL: "1"
+        run: |
+          git config user.name "prijswacht-bot"
+          git config user.email "prijswacht-bot@users.noreply.github.com"
+          start=$(date +%s)
+          for i in 1 2 3 4 5; do
+            t0=$(date +%s)
+            git pull -q --rebase origin "${GITHUB_REF_NAME}" || true
+            TYPE=$(jq -r .trip_type settings.json); OUT=$(jq -r .out_date settings.json)
+            RET=$(jq -r '.ret_date // ""' settings.json); FLEX=$(jq -r '.flex_days // 3' settings.json)
+            echo "== Scan $i: $TYPE $OUT $RET ±$FLEX =="
+            timeout 50m xvfb-run -a --server-args="-screen 0 1920x1080x24" \
+              python scan.py --type "$TYPE" --out "$OUT" --ret "$RET" --flex "$FLEX" || echo "scan $i gaf een fout"
+            if [ -f results/latest.json ]; then
+              git add results/latest.json
+              git commit -qm "Prijzen $(date -u +%Y-%m-%dT%H:%MZ)" || true
+              for try in 1 2 3; do git pull -q --rebase -X theirs origin "${GITHUB_REF_NAME}" && git push -q && break; sleep 5; done
+            fi
+            # wachten tot een uur na de start van deze scan (niet langer dan de job toelaat)
+            now=$(date +%s); wait=$(( 3600 - (now - t0) ))
+            if [ $i -lt 5 ] && [ $wait -gt 0 ] && [ $(( now - start + wait )) -lt 19800 ]; then sleep $wait; fi
+          done
+
+      - name: Opnieuw starten
+        if: always()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          curl -s -X POST -H "Authorization: Bearer $GH_TOKEN" -H "Accept: application/vnd.github+json" \
+            "https://api.github.com/repos/${GITHUB_REPOSITORY}/actions/workflows/loop.yml/dispatches" \
+            -d "{\"ref\":\"${GITHUB_REF_NAME}\"}" && echo "volgende lus gestart"
