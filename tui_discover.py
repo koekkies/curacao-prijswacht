@@ -6,13 +6,12 @@ import re
 from pathlib import Path
 
 OUT = Path(__file__).resolve().parent / "results" / "tui_debug"
+import os
 OUT.mkdir(parents=True, exist_ok=True)
 
-CANDIDATES = {
+CANDIDATES = json.loads(os.environ["CANDIDATES"]) if os.environ.get("CANDIDATES") else {
     "home": "https://www.tui.nl/vliegtickets/",
-    "route": "https://www.tui.nl/vliegtickets/vluchten/curacao/",
-    "search_a": "https://www.tui.nl/flight/nl/search?flyingFrom%5B%5D=AMS&flyingTo%5B%5D=CUR&depDate=2026-12-18&adults=1&children=0&childAge=&choiceSearch=true&searchType=pricegrid&nearByAirports=true&currency=EUR&isOneWay=true",
-    "search_b": "https://www.tui.nl/flight/search?flyingFrom%5B%5D=AMS&flyingTo%5B%5D=CUR&depDate=2026-12-18&adults=1&isOneWay=true",
+    "search_a": "https://www.tui.nl/flight/nl/search?flyingFrom%5B%5D=AMS&flyingTo%5B%5D=CUR&depDate=2026-12-18&adults=1&isOneWay=true",
 }
 
 net = {}
@@ -29,14 +28,14 @@ def make_action(name):
                 ct = r.headers.get("content-type", "")
                 if "json" in ct and r.request.resource_type in ("xhr", "fetch"):
                     body = r.text()
-                    if re.search(r"(price|prijs|amount|fare)", body, re.I):
-                        resp.append({"u": r.url, "status": r.status, "body": body[:4000]})
+                    if re.search(r"(price|prijs|amount|fare|offer)", body, re.I):
+                        resp.append({"u": r.url, "status": r.status, "body": body[:20000]})
             except Exception:
                 pass
 
         page.on("response", on_resp)
         # cookiemelding
-        for txt in ("Accepteren", "Alles accepteren", "Akkoord", "Accept all", "Accepteer alle cookies"):
+        for txt in ("Accepteren", "Alles accepteren", "Akkoord", "Accept all", "Accepteer alle cookies", "Accept", "Agree", "Weigeren", "Reject"):
             try:
                 b = page.get_by_role("button", name=re.compile(txt, re.I))
                 if b.count():
@@ -49,7 +48,7 @@ def make_action(name):
             page.reload(wait_until="networkidle", timeout=45000)
         except Exception:
             pass
-        page.wait_for_timeout(6000)
+        page.wait_for_timeout(9000)
         page.screenshot(path=str(OUT / f"{name}.png"), full_page=False)
         info = page.evaluate("""() => {
           const pick = el => ({tag: el.tagName, type: el.type||'', name: el.name||'', id: el.id||'',
@@ -59,7 +58,7 @@ def make_action(name):
           return {
             url: location.href, title: document.title,
             inputs: [...document.querySelectorAll('input,select,button,[role=button],[role=combobox]')].slice(0,150).map(pick),
-            links: [...document.querySelectorAll('a[href]')].map(a=>a.href).filter(h=>/flight|vlucht|search|zoek|booking/i.test(h)).slice(0,80),
+            links: [...document.querySelectorAll('a[href]')].map(a=>a.href).filter(h=>/flight|vlucht|search|zoek|book|offer|ibe|select/i.test(h)).slice(0,150),
             prices: (document.body.innerText.match(/€\\s?\\d[\\d.,]*/g)||[]).slice(0,40)
           };
         }""")
