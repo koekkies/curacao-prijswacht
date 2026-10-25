@@ -18,10 +18,10 @@ from pathlib import Path
 OUT_DIR = Path(__file__).resolve().parent / "results"
 
 
-def search_url(dep: date, ret: date | None) -> str:
+def search_url(dep: date, ret: date | None, pax: int = 1) -> str:
     p = {
         "flyingFrom[]": "AMS", "flyingTo[]": "CUR", "depDate": dep.isoformat(),
-        "adults": "1", "children": "0", "childAge": "", "choiceSearch": "true",
+        "adults": str(pax), "children": "0", "childAge": "", "choiceSearch": "true",
         "searchType": "pricegrid", "nearByAirports": "true", "currency": "EUR",
         "isOneWay": "false" if ret else "true",
     }
@@ -75,11 +75,12 @@ def parse_offers(payload: dict, url: str, trip_type: str) -> list[dict]:
             "seats_left": ob.get("availableSeats"),
             "url": url,
             "source": "TUI.nl",
+            "pax": None,
         })
     return out
 
 
-def tui_scan(trip_type: str, out: date, ret: date | None, flex: int) -> tuple[list, dict, list]:
+def tui_scan(trip_type: str, out: date, ret: date | None, flex: int, pax: int = 1) -> tuple[list, dict, list]:
     """Geeft (vluchten, prijs-per-dag, log)."""
     from scrapling.fetchers import StealthySession
 
@@ -90,7 +91,7 @@ def tui_scan(trip_type: str, out: date, ret: date | None, flex: int) -> tuple[li
     with StealthySession(headless=True) as s:
         for d in days:
             r = d + timedelta(days=nights) if trip_type == "round_trip" else None
-            url = search_url(d, r)
+            url = search_url(d, r, pax)
             captured = {"results": [], "carousel": []}
 
             def action(page, captured=captured):

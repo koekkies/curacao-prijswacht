@@ -42,11 +42,13 @@ def to_24h(t: str) -> str:
         return t
 
 
-def build_url(dep: date, ret: date | None) -> str:
+def build_url(dep: date, ret: date | None, pax: int = 1) -> str:
     if ret:
         q = f"Flights to {DEST} from {ORIGIN} on {dep.isoformat()} through {ret.isoformat()}"
     else:
         q = f"One way flights to {DEST} from {ORIGIN} on {dep.isoformat()}"
+    if pax > 1:
+        q += f" for {pax} adults"
     params = {"q": q, "curr": "EUR", "hl": "en", "gl": "nl"}
     return "https://www.google.com/travel/flights?" + urllib.parse.urlencode(params)
 
@@ -104,7 +106,7 @@ def handle_consent(page):
     return page
 
 
-def scan(trip_type: str, out: date, ret: date | None, flex: int, debug_dir: Path) -> tuple[list, list]:
+def scan(trip_type: str, out: date, ret: date | None, flex: int, debug_dir: Path, pax: int = 1) -> tuple[list, list]:
     from scrapling.fetchers import StealthySession
 
     nights = (ret - out).days if ret else None
@@ -117,7 +119,7 @@ def scan(trip_type: str, out: date, ret: date | None, flex: int, debug_dir: Path
     with StealthySession(headless=True) as session:
         for d in days:
             r = d + timedelta(days=nights) if trip_type == "round_trip" else None
-            url = build_url(d, r)
+            url = build_url(d, r, pax)
             found = []
             try:
                 page = session.fetch(url, page_action=handle_consent, network_idle=True)
@@ -151,17 +153,23 @@ def main():
     ap.add_argument("--out", required=True)
     ap.add_argument("--ret", default="")
     ap.add_argument("--flex", type=int, default=3)
+    ap.add_argument("--pax", type=int, default=0)
     a = ap.parse_args()
+    if not a.pax:
+        try:
+            a.pax = int(json.loads((Path(__file__).resolve().parent / "settings.json").read_text()).get("passengers", 1))
+        except Exception:
+            a.pax = 1
 
     out = date.fromisoformat(a.out)
     ret = date.fromisoformat(a.ret) if (a.ret and a.type == "round_trip") else None
     flex = max(0, min(a.flex, 7))
 
-    flights, log = scan(a.type, out, ret, flex, OUT_DIR / "debug")
+    flights, log = scan(a.type, out, ret, flex, OUT_DIR / "debug", a.pax)
     tui_per_day = {}
     try:  # rechtstreeks bij TUI
         from tui import tui_scan
-        tui_flights, tui_per_day, tui_log = tui_scan(a.type, out, ret, flex)
+        tui_flights, tui_per_day, tui_log = tui_scan(a.type, out, ret, flex, a.pax)
         flights.extend(tui_flights)
         log.extend(tui_log)
     except Exception as e:
@@ -170,7 +178,7 @@ def main():
     cor_per_day = {}
     try:  # rechtstreeks bij Corendon
         from corendon import corendon_scan
-        cor_flights, cor_per_day, cor_log = corendon_scan(a.type, out, ret, flex)
+        cor_flights, cor_per_day, cor_log = corendon_scan(a.type, out, ret, flex, a.pax)
         flights.extend(cor_flights)
         log.extend(cor_log)
     except Exception as e:
@@ -181,7 +189,7 @@ def main():
     OUT_DIR.mkdir(exist_ok=True)
     result = {
         "scanned_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
-        "request": {"type": a.type, "out": a.out, "ret": a.ret, "flex": flex},
+        "request": {"type": a.type, "out": a.out, "ret": a.ret, "flex": flex, "pax": a.pax},
         "count": len(flights),
         "flights": flights,
         "tui_per_day": tui_per_day,
