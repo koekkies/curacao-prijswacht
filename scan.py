@@ -158,6 +158,15 @@ def main():
     flex = max(0, min(a.flex, 7))
 
     flights, log = scan(a.type, out, ret, flex, OUT_DIR / "debug")
+    tui_per_day = {}
+    try:  # rechtstreeks bij TUI
+        from tui import tui_scan
+        tui_flights, tui_per_day, tui_log = tui_scan(a.type, out, ret, flex)
+        flights.extend(tui_flights)
+        log.extend(tui_log)
+    except Exception as e:
+        log.append(f"TUI mislukt: {type(e).__name__}: {e}")
+        print(log[-1], flush=True)
     flights.sort(key=lambda f: (f["price"], f["out"]))
     OUT_DIR.mkdir(exist_ok=True)
     result = {
@@ -165,6 +174,7 @@ def main():
         "request": {"type": a.type, "out": a.out, "ret": a.ret, "flex": flex},
         "count": len(flights),
         "flights": flights,
+        "tui_per_day": tui_per_day,
         "log": log,
     }
     (OUT_DIR / "latest.json").write_text(json.dumps(result, ensure_ascii=False, indent=1), encoding="utf-8")
