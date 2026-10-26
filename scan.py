@@ -53,12 +53,13 @@ def build_url(dep: date, ret: date | None, pax: int = 1) -> str:
     return "https://www.google.com/travel/flights?" + urllib.parse.urlencode(params)
 
 
-def parse_label(label: str, dep: date, ret: date | None, url: str) -> dict | None:
+def parse_label(label: str, dep: date, ret: date | None, url: str, pax: int = 1) -> dict | None:
     label = label.replace(" ", " ").replace("\xa0", " ")
     m = RE_PRICE.search(label)
     if not m:
         return None
-    price = int(re.sub(r"[^\d]", "", m.group(1)))
+    total = int(re.sub(r"[^\d]", "", m.group(1)))  # Google geeft bij meerdere reizigers de totaalprijs
+    price = round(total / max(1, pax))
     a = RE_AIRLINE.search(label)
     airline = a.group(1).strip().replace(" and ", ", ") if a else "Onbekend"
     if re.search(r"\bnonstop\b", label, re.I):
@@ -70,6 +71,8 @@ def parse_label(label: str, dep: date, ret: date | None, url: str) -> dict | Non
     return {
         "type": "round_trip" if ret else "one_way",
         "price": price,
+        "price_total": total,
+        "pax": pax,
         "out": dep.isoformat(),
         "ret": ret.isoformat() if ret else None,
         "airline": airline,
@@ -126,7 +129,7 @@ def scan(trip_type: str, out: date, ret: date | None, flex: int, debug_dir: Path
                 labels = page.css("[aria-label^='From ']::attr(aria-label)").getall()
                 seen = set()
                 for lab in labels:
-                    f = parse_label(str(lab), d, r, url)
+                    f = parse_label(str(lab), d, r, url, pax)
                     if not f:
                         continue
                     key = (f["price"], f["airline"], f["dep_time"], f["arr_time"])
