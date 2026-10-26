@@ -1,5 +1,5 @@
 {
- "scanned_at": "2026-10-26T03:42:58+00:00",
+ "scanned_at": "2026-10-26T04:42:47+00:00",
  "request": {
   "type": "one_way",
   "out": "2026-12-18",
@@ -7,7 +7,7 @@
   "flex": 3,
   "pax": 3
  },
- "count": 378,
+ "count": 374,
  "flights": [
   {
    "type": "one_way",
@@ -415,7 +415,7 @@
    "arr_time": "17:45",
    "duration": "12u 20m",
    "flight_no": "OR393",
-   "seats_left": 6,
+   "seats_left": 7,
    "url": "https://www.tui.nl/flight/nl/search?flyingFrom%5B%5D=AMS&flyingTo%5B%5D=CUR&depDate=2026-12-18&adults=3&children=0&childAge=&choiceSearch=true&searchType=pricegrid&nearByAirports=true&currency=EUR&isOneWay=true",
    "source": "TUI.nl",
    "pax": null
@@ -508,6 +508,26 @@
    "direct": true,
    "stops": 0,
    "via": "",
+   "dep_time": "09:55",
+   "arr_time": "14:55",
+   "arr_date": "2026-12-18",
+   "duration": "10u 0m",
+   "flight_no": "KL735",
+   "seats_left": 3,
+   "pax": 3,
+   "url": "https://www.klm.nl/search/offers?pax=3:0:0:0:0:0:0:0&cabinClass=ECONOMY&activeConnection=0&connections=AMS:A:20261218%3ECUR:A&bookingFlow=LEISURE",
+   "source": "KLM.nl"
+  },
+  {
+   "type": "one_way",
+   "price": 1665,
+   "price_total": 4996,
+   "out": "2026-12-18",
+   "ret": null,
+   "airline": "KLM (klm.nl)",
+   "direct": true,
+   "stops": 0,
+   "via": "",
    "dep_time": "13:05",
    "arr_time": "18:05",
    "arr_date": "2026-12-18",
@@ -561,27 +581,7 @@
    "arr_date": "2026-12-19",
    "duration": "32u 40m",
    "flight_no": "KL787",
-   "seats_left": 7,
-   "pax": 3,
-   "url": "https://www.klm.nl/search/offers?pax=3:0:0:0:0:0:0:0&cabinClass=ECONOMY&activeConnection=0&connections=AMS:A:20261218%3ECUR:A&bookingFlow=LEISURE",
-   "source": "KLM.nl"
-  },
-  {
-   "type": "one_way",
-   "price": 1992,
-   "price_total": 5977,
-   "out": "2026-12-18",
-   "ret": null,
-   "airline": "KLM (klm.nl)",
-   "direct": true,
-   "stops": 0,
-   "via": "",
-   "dep_time": "09:55",
-   "arr_time": "14:55",
-   "arr_date": "2026-12-18",
-   "duration": "10u 0m",
-   "flight_no": "KL735",
-   "seats_left": 9,
+   "seats_left": 3,
    "pax": 3,
    "url": "https://www.klm.nl/search/offers?pax=3:0:0:0:0:0:0:0&cabinClass=ECONOMY&activeConnection=0&connections=AMS:A:20261218%3ECUR:A&bookingFlow=LEISURE",
    "source": "KLM.nl"
@@ -1085,20 +1085,6 @@
   {
    "type": "one_way",
    "price": 4173,
-   "out": "2026-12-15",
-   "ret": null,
-   "airline": "Air Europa, Avianca",
-   "direct": false,
-   "stops": 2,
-   "dep_time": "19:00",
-   "arr_time": "17:05",
-   "duration": "27u 5m",
-   "url": "https://www.google.com/travel/flights?q=One+way+flights+to+CUR+from+AMS+on+2026-12-15+for+3+adults&curr=EUR&hl=en&gl=nl",
-   "source": "Google Flights"
-  },
-  {
-   "type": "one_way",
-   "price": 4173,
    "out": "2026-12-21",
    "ret": null,
    "airline": "British Airways, American",
@@ -1308,20 +1294,6 @@
   },
   {
    "type": "one_way",
-   "price": 4423,
-   "out": "2026-12-16",
-   "ret": null,
-   "airline": "British Airways, Avianca",
-   "direct": false,
-   "stops": 2,
-   "dep_time": "14:15",
-   "arr_time": "17:05",
-   "duration": "31u 50m",
-   "url": "https://www.google.com/travel/flights?q=One+way+flights+to+CUR+from+AMS+on+2026-12-16+for+3+adults&curr=EUR&hl=en&gl=nl",
-   "source": "Google Flights"
-  },
-  {
-   "type": "one_way",
    "price": 4443,
    "out": "2026-12-15",
    "ret": null,
@@ -1458,20 +1430,6 @@
    "arr_time": "10:30",
    "duration": "32u 20m",
    "url": "https://www.google.com/travel/flights?q=One+way+flights+to+CUR+from+AMS+on+2026-12-16+for+3+adults&curr=EUR&hl=en&gl=nl",
-   "source": "Google Flights"
-  },
-  {
-   "type": "one_way",
-   "price": 4472,
-   "out": "2026-12-21",
-   "ret": null,
-   "airline": "Iberia, Avianca",
-   "direct": false,
-   "stops": 2,
-   "dep_time": "07:10",
-   "arr_time": "10:30",
-   "duration": "32u 20m",
-   "url": "https://www.google.com/travel/flights?q=One+way+flights+to+CUR+from+AMS+on+2026-12-21+for+3+adults&curr=EUR&hl=en&gl=nl",
    "source": "Google Flights"
   },
   {
@@ -3096,20 +3054,6 @@
    "arr_time": "17:05",
    "duration": "27u 5m",
    "url": "https://www.google.com/travel/flights?q=One+way+flights+to+CUR+from+AMS+on+2026-12-17+for+3+adults&curr=EUR&hl=en&gl=nl",
-   "source": "Google Flights"
-  },
-  {
-   "type": "one_way",
-   "price": 9915,
-   "out": "2026-12-19",
-   "ret": null,
-   "airline": "Air Europa, Avianca",
-   "direct": false,
-   "stops": 2,
-   "dep_time": "19:00",
-   "arr_time": "17:05",
-   "duration": "27u 5m",
-   "url": "https://www.google.com/travel/flights?q=One+way+flights+to+CUR+from+AMS+on+2026-12-19+for+3+adults&curr=EUR&hl=en&gl=nl",
    "source": "Google Flights"
   },
   {
@@ -5481,7 +5425,7 @@
   "2026-12-24": 640
  },
  "corendon_per_day": {
-  "2026-12-13": 528,
+  "2026-12-13": 563,
   "2026-12-15": 633,
   "2026-12-16": 703,
   "2026-12-18": 1116,
@@ -5495,13 +5439,13 @@
   "2026-12-18": 1487
  },
  "log": [
-  "2026-12-15 : 50 vluchten",
-  "2026-12-16 : 52 vluchten",
+  "2026-12-15 : 49 vluchten",
+  "2026-12-16 : 51 vluchten",
   "2026-12-17 : 57 vluchten",
   "2026-12-18 : 51 vluchten",
-  "2026-12-19 : 42 vluchten",
+  "2026-12-19 : 41 vluchten",
   "2026-12-20 : 50 vluchten",
-  "2026-12-21 : 47 vluchten",
+  "2026-12-21 : 46 vluchten",
   "TUI 2026-12-15: 2 vluchten",
   "TUI 2026-12-16: 2 vluchten",
   "TUI 2026-12-17: 3 vluchten",
