@@ -180,10 +180,14 @@ def corendon_scan(trip_type: str, out: date, ret: date | None, flex: int, pax: i
     with StealthySession(headless=True) as s:
         outbound, per_day = nl_scan(s, out, flex, pax, log)
         lo, hi = out - timedelta(days=flex), out + timedelta(days=flex)
-        offers = [f for f in outbound if lo.isoformat() <= f["out"] <= hi.isoformat()] or outbound
+        in_window = [f for f in outbound if lo.isoformat() <= f["out"] <= hi.isoformat()]
+        # enkele reis: valt terug op de dichtstbijzijnde dagen; retour: alleen de gevraagde data
+        offers = in_window if (in_window or trip_type == "round_trip") else outbound
         if trip_type == "round_trip":
             r = ret or (out + timedelta(days=14))
             inbound, _ = nl_scan(s, r, flex, pax, log, org="curacao", dst="amsterdam")
+            rlo, rhi = (r - timedelta(days=flex)).isoformat(), (r + timedelta(days=flex)).isoformat()
+            inbound = [b for b in inbound if rlo <= b["out"] <= rhi]
             combos = []
             for o in offers:
                 for b in inbound:
