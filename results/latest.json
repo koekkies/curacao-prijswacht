@@ -1,5 +1,5 @@
 {
- "scanned_at": "2026-10-26T01:15:32+00:00",
+ "scanned_at": "2026-10-26T01:42:29+00:00",
  "request": {
   "type": "one_way",
   "out": "2026-12-18",
@@ -7,7 +7,7 @@
   "flex": 3,
   "pax": 3
  },
- "count": 395,
+ "count": 387,
  "flights": [
   {
    "type": "one_way",
@@ -710,34 +710,6 @@
    "arr_time": "16:50",
    "duration": "10u 40m",
    "url": "https://www.google.com/travel/flights?q=One+way+flights+to+CUR+from+AMS+on+2026-12-20+for+3+adults&curr=EUR&hl=en&gl=nl",
-   "source": "Google Flights"
-  },
-  {
-   "type": "one_way",
-   "price": 3178,
-   "out": "2026-12-15",
-   "ret": null,
-   "airline": "British Airways, Air Canada",
-   "direct": false,
-   "stops": 2,
-   "dep_time": "11:30",
-   "arr_time": "15:45",
-   "duration": "33u 15m",
-   "url": "https://www.google.com/travel/flights?q=One+way+flights+to+CUR+from+AMS+on+2026-12-15+for+3+adults&curr=EUR&hl=en&gl=nl",
-   "source": "Google Flights"
-  },
-  {
-   "type": "one_way",
-   "price": 3214,
-   "out": "2026-12-16",
-   "ret": null,
-   "airline": "British Airways, Air Canada",
-   "direct": false,
-   "stops": 2,
-   "dep_time": "11:30",
-   "arr_time": "15:45",
-   "duration": "33u 15m",
-   "url": "https://www.google.com/travel/flights?q=One+way+flights+to+CUR+from+AMS+on+2026-12-16+for+3+adults&curr=EUR&hl=en&gl=nl",
    "source": "Google Flights"
   },
   {
@@ -1974,34 +1946,6 @@
   },
   {
    "type": "one_way",
-   "price": 5377,
-   "out": "2026-12-18",
-   "ret": null,
-   "airline": "Air Europa, COPA",
-   "direct": false,
-   "stops": 2,
-   "dep_time": "11:00",
-   "arr_time": "12:22",
-   "duration": "30u 22m",
-   "url": "https://www.google.com/travel/flights?q=One+way+flights+to+CUR+from+AMS+on+2026-12-18+for+3+adults&curr=EUR&hl=en&gl=nl",
-   "source": "Google Flights"
-  },
-  {
-   "type": "one_way",
-   "price": 5377,
-   "out": "2026-12-18",
-   "ret": null,
-   "airline": "Air Europa, COPA",
-   "direct": false,
-   "stops": 2,
-   "dep_time": "11:00",
-   "arr_time": "14:37",
-   "duration": "32u 37m",
-   "url": "https://www.google.com/travel/flights?q=One+way+flights+to+CUR+from+AMS+on+2026-12-18+for+3+adults&curr=EUR&hl=en&gl=nl",
-   "source": "Google Flights"
-  },
-  {
-   "type": "one_way",
    "price": 5619,
    "out": "2026-12-17",
    "ret": null,
@@ -2012,34 +1956,6 @@
    "arr_time": "11:40",
    "duration": "28u 35m",
    "url": "https://www.google.com/travel/flights?q=One+way+flights+to+CUR+from+AMS+on+2026-12-17+for+3+adults&curr=EUR&hl=en&gl=nl",
-   "source": "Google Flights"
-  },
-  {
-   "type": "one_way",
-   "price": 5773,
-   "out": "2026-12-20",
-   "ret": null,
-   "airline": "Air Europa, COPA",
-   "direct": false,
-   "stops": 2,
-   "dep_time": "11:00",
-   "arr_time": "12:22",
-   "duration": "30u 22m",
-   "url": "https://www.google.com/travel/flights?q=One+way+flights+to+CUR+from+AMS+on+2026-12-20+for+3+adults&curr=EUR&hl=en&gl=nl",
-   "source": "Google Flights"
-  },
-  {
-   "type": "one_way",
-   "price": 5773,
-   "out": "2026-12-20",
-   "ret": null,
-   "airline": "Air Europa, COPA",
-   "direct": false,
-   "stops": 2,
-   "dep_time": "11:00",
-   "arr_time": "14:37",
-   "duration": "32u 37m",
-   "url": "https://www.google.com/travel/flights?q=One+way+flights+to+CUR+from+AMS+on+2026-12-20+for+3+adults&curr=EUR&hl=en&gl=nl",
    "source": "Google Flights"
   },
   {
@@ -2502,34 +2418,6 @@
    "arr_time": "17:05",
    "duration": "30u 15m",
    "url": "https://www.google.com/travel/flights?q=One+way+flights+to+CUR+from+AMS+on+2026-12-18+for+3+adults&curr=EUR&hl=en&gl=nl",
-   "source": "Google Flights"
-  },
-  {
-   "type": "one_way",
-   "price": 6963,
-   "out": "2026-12-19",
-   "ret": null,
-   "airline": "Iberia, Avianca",
-   "direct": false,
-   "stops": 2,
-   "dep_time": "07:10",
-   "arr_time": "10:30",
-   "duration": "32u 20m",
-   "url": "https://www.google.com/travel/flights?q=One+way+flights+to+CUR+from+AMS+on+2026-12-19+for+3+adults&curr=EUR&hl=en&gl=nl",
-   "source": "Google Flights"
-  },
-  {
-   "type": "one_way",
-   "price": 6963,
-   "out": "2026-12-19",
-   "ret": null,
-   "airline": "Iberia, Avianca",
-   "direct": false,
-   "stops": 2,
-   "dep_time": "12:15",
-   "arr_time": "10:30",
-   "duration": "27u 15m",
-   "url": "https://www.google.com/travel/flights?q=One+way+flights+to+CUR+from+AMS+on+2026-12-19+for+3+adults&curr=EUR&hl=en&gl=nl",
    "source": "Google Flights"
   },
   {
@@ -5683,12 +5571,12 @@
  },
  "klm_per_day": {},
  "log": [
-  "2026-12-15 : 55 vluchten",
-  "2026-12-16 : 60 vluchten",
+  "2026-12-15 : 54 vluchten",
+  "2026-12-16 : 59 vluchten",
   "2026-12-17 : 57 vluchten",
-  "2026-12-18 : 57 vluchten",
-  "2026-12-19 : 49 vluchten",
-  "2026-12-20 : 58 vluchten",
+  "2026-12-18 : 55 vluchten",
+  "2026-12-19 : 47 vluchten",
+  "2026-12-20 : 56 vluchten",
   "2026-12-21 : 38 vluchten",
   "TUI 2026-12-15: 2 vluchten",
   "TUI 2026-12-16: 2 vluchten",
