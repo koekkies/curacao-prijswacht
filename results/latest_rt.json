@@ -1,5 +1,5 @@
 {
- "scanned_at": "2026-10-26T17:42:23+00:00",
+ "scanned_at": "2026-10-26T18:41:56+00:00",
  "request": {
   "type": "round_trip",
   "out": [
@@ -10,7 +10,7 @@
   "flex": 0,
   "pax": 3
  },
- "count": 70,
+ "count": 68,
  "flights": [
   {
    "type": "round_trip",
@@ -122,38 +122,6 @@
    "arr_time": "14:50",
    "duration": "26u 45m",
    "url": "https://www.google.com/travel/flights?q=Flights+to+CUR+from+AMS+on+2026-12-17+through+2026-12-31+for+3+adults&curr=EUR&hl=en&gl=nl",
-   "source": "Google Flights"
-  },
-  {
-   "type": "round_trip",
-   "price": 2270,
-   "price_total": 6810,
-   "pax": 3,
-   "out": "2026-12-18",
-   "ret": "2026-12-31",
-   "airline": "TUI fly Netherlands",
-   "direct": true,
-   "stops": 0,
-   "dep_time": "11:40",
-   "arr_time": "17:20",
-   "duration": "10u 40m",
-   "url": "https://www.google.com/travel/flights?q=Flights+to+CUR+from+AMS+on+2026-12-18+through+2026-12-31+for+3+adults&curr=EUR&hl=en&gl=nl",
-   "source": "Google Flights"
-  },
-  {
-   "type": "round_trip",
-   "price": 2270,
-   "price_total": 6810,
-   "pax": 3,
-   "out": "2026-12-18",
-   "ret": "2026-12-31",
-   "airline": "TUI fly Netherlands",
-   "direct": false,
-   "stops": 1,
-   "dep_time": "10:25",
-   "arr_time": "17:45",
-   "duration": "12u 20m",
-   "url": "https://www.google.com/travel/flights?q=Flights+to+CUR+from+AMS+on+2026-12-18+through+2026-12-31+for+3+adults&curr=EUR&hl=en&gl=nl",
    "source": "Google Flights"
   },
   {
@@ -1164,7 +1132,7 @@
   "[2026-12-17 → 2026-12-31] Corendon.com curacao→amsterdam rond 2026-12-31: 4 vlucht(en)",
   "[2026-12-17 → 2026-12-31] KLM 2026-12-17 → 2026-12-31: 0 vluchten (geen antwoord van KLM)",
   "[2026-12-17 → 2026-12-31] 6 vlucht(en) zonder retour weggelaten",
-  "[2026-12-18 → 2026-12-31] 2026-12-18 → 2026-12-31: 39 vluchten",
+  "[2026-12-18 → 2026-12-31] 2026-12-18 → 2026-12-31: 37 vluchten",
   "[2026-12-18 → 2026-12-31] TUI 2026-12-18 → 2026-12-31: 5 vluchten",
   "[2026-12-18 → 2026-12-31] Corendon.com amsterdam→curacao rond 2026-12-18: 4 vlucht(en)",
   "[2026-12-18 → 2026-12-31] Corendon.com curacao→amsterdam rond 2026-12-31: 4 vlucht(en)",
