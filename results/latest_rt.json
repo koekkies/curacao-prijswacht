@@ -1,5 +1,5 @@
 {
- "scanned_at": "2026-10-26T23:27:49+00:00",
+ "scanned_at": "2026-10-27T00:27:12+00:00",
  "request": {
   "type": "round_trip",
   "out": [
@@ -10,7 +10,7 @@
   "flex": 0,
   "pax": 3
  },
- "count": 62,
+ "count": 61,
  "flights": [
   {
    "type": "round_trip",
@@ -121,22 +121,6 @@
    "dep_time": "13:05",
    "arr_time": "18:05",
    "duration": "10u",
-   "url": "https://www.google.com/travel/flights?q=Flights+to+CUR+from+AMS+on+2026-12-18+through+2026-12-31+for+3+adults&curr=EUR&hl=en&gl=nl",
-   "source": "Google Flights"
-  },
-  {
-   "type": "round_trip",
-   "price": 2154,
-   "price_total": 6461,
-   "pax": 3,
-   "out": "2026-12-18",
-   "ret": "2026-12-31",
-   "airline": "Air Europa, COPA",
-   "direct": false,
-   "stops": 2,
-   "dep_time": "11:00",
-   "arr_time": "12:22",
-   "duration": "30u 22m",
    "url": "https://www.google.com/travel/flights?q=Flights+to+CUR+from+AMS+on+2026-12-18+through+2026-12-31+for+3+adults&curr=EUR&hl=en&gl=nl",
    "source": "Google Flights"
   },
@@ -1005,7 +989,23 @@
    "source": "Google Flights"
   }
  ],
- "tui_per_day": {},
+ "tui_per_day": {
+  "2026-12-14": 580,
+  "2026-12-15": 650,
+  "2026-12-16": 820,
+  "2026-12-17": 1000,
+  "2026-12-18": 1550,
+  "2026-12-19": 1150,
+  "2026-12-20": 1050,
+  "2026-12-21": 1000,
+  "2026-12-28": 690,
+  "2026-12-29": 690,
+  "2026-12-30": 690,
+  "2026-12-31": 720,
+  "2027-01-01": 1100,
+  "2027-01-02": 1400,
+  "2027-01-03": 1100
+ },
  "corendon_per_day": {
   "2026-12-16": 703,
   "2026-12-18": 1116,
@@ -1015,14 +1015,16 @@
  "klm_per_day": {},
  "log": [
   "[2026-12-17 → 2026-12-31] 2026-12-17 → 2026-12-31: 33 vluchten",
-  "[2026-12-17 → 2026-12-31] TUI 2026-12-17 → 2026-12-31: 0 vluchten",
+  "[2026-12-17 → 2026-12-31] TUI 2026-12-17 → 2026-12-31: 6 vluchten",
   "[2026-12-17 → 2026-12-31] Corendon.com amsterdam→curacao rond 2026-12-17: 4 vlucht(en)",
   "[2026-12-17 → 2026-12-31] Corendon.com curacao→amsterdam rond 2026-12-31: 4 vlucht(en)",
   "[2026-12-17 → 2026-12-31] KLM 2026-12-17 → 2026-12-31: 0 vluchten (geen antwoord van KLM)",
-  "[2026-12-18 → 2026-12-31] 2026-12-18 → 2026-12-31: 36 vluchten",
-  "[2026-12-18 → 2026-12-31] TUI 2026-12-18 → 2026-12-31: 0 vluchten",
+  "[2026-12-17 → 2026-12-31] 6 vlucht(en) zonder retour weggelaten",
+  "[2026-12-18 → 2026-12-31] 2026-12-18 → 2026-12-31: 34 vluchten",
+  "[2026-12-18 → 2026-12-31] TUI 2026-12-18 → 2026-12-31: 5 vluchten",
   "[2026-12-18 → 2026-12-31] Corendon.com amsterdam→curacao rond 2026-12-18: 4 vlucht(en)",
   "[2026-12-18 → 2026-12-31] Corendon.com curacao→amsterdam rond 2026-12-31: 4 vlucht(en)",
-  "[2026-12-18 → 2026-12-31] KLM 2026-12-18 → 2026-12-31: 0 vluchten (geen antwoord van KLM)"
+  "[2026-12-18 → 2026-12-31] KLM 2026-12-18 → 2026-12-31: 0 vluchten (geen antwoord van KLM)",
+  "[2026-12-18 → 2026-12-31] 5 vlucht(en) zonder retour weggelaten"
  ]
 }
