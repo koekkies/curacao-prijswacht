@@ -1,5 +1,5 @@
 {
- "scanned_at": "2026-10-27T10:08:13+00:00",
+ "scanned_at": "2026-10-27T11:08:07+00:00",
  "request": {
   "type": "round_trip",
   "out": [
@@ -14,8 +14,8 @@
  "flights": [
   {
    "type": "round_trip",
-   "price": 1708,
-   "price_total": 5124,
+   "price": 1709,
+   "price_total": 5127,
    "pax": 3,
    "out": "2026-12-17",
    "ret": "2026-12-31",
@@ -30,8 +30,8 @@
   },
   {
    "type": "round_trip",
-   "price": 1708,
-   "price_total": 5124,
+   "price": 1709,
+   "price_total": 5127,
    "pax": 3,
    "out": "2026-12-17",
    "ret": "2026-12-31",
@@ -46,8 +46,8 @@
   },
   {
    "type": "round_trip",
-   "price": 1708,
-   "price_total": 5124,
+   "price": 1709,
+   "price_total": 5127,
    "pax": 3,
    "out": "2026-12-17",
    "ret": "2026-12-31",
@@ -1015,11 +1015,11 @@
  "klm_per_day": {},
  "log": [
   "[2026-12-17 → 2026-12-31] 2026-12-17 → 2026-12-31: 33 vluchten",
-  "[2026-12-17 → 2026-12-31] TUI 2026-12-17 → 2026-12-31: 6 vluchten",
+  "[2026-12-17 → 2026-12-31] TUI 2026-12-17 → 2026-12-31: 3 vluchten",
   "[2026-12-17 → 2026-12-31] Corendon.com amsterdam→curacao rond 2026-12-17: 4 vlucht(en)",
   "[2026-12-17 → 2026-12-31] Corendon.com curacao→amsterdam rond 2026-12-31: 4 vlucht(en)",
   "[2026-12-17 → 2026-12-31] KLM 2026-12-17 → 2026-12-31: 0 vluchten (geen antwoord van KLM)",
-  "[2026-12-17 → 2026-12-31] 6 vlucht(en) zonder retour weggelaten",
+  "[2026-12-17 → 2026-12-31] 3 vlucht(en) zonder retour weggelaten",
   "[2026-12-18 → 2026-12-31] 2026-12-18 → 2026-12-31: 34 vluchten",
   "[2026-12-18 → 2026-12-31] TUI 2026-12-18 → 2026-12-31: 5 vluchten",
   "[2026-12-18 → 2026-12-31] Corendon.com amsterdam→curacao rond 2026-12-18: 4 vlucht(en)",
