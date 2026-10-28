@@ -1,5 +1,5 @@
 {
- "scanned_at": "2026-10-28T01:48:53+00:00",
+ "scanned_at": "2026-10-28T02:49:01+00:00",
  "request": {
   "type": "round_trip",
   "out": [
@@ -14,8 +14,8 @@
  "flights": [
   {
    "type": "round_trip",
-   "price": 1712,
-   "price_total": 5136,
+   "price": 1710,
+   "price_total": 5130,
    "pax": 3,
    "out": "2026-12-17",
    "ret": "2026-12-31",
@@ -30,8 +30,8 @@
   },
   {
    "type": "round_trip",
-   "price": 1712,
-   "price_total": 5136,
+   "price": 1710,
+   "price_total": 5130,
    "pax": 3,
    "out": "2026-12-17",
    "ret": "2026-12-31",
@@ -46,8 +46,8 @@
   },
   {
    "type": "round_trip",
-   "price": 1712,
-   "price_total": 5136,
+   "price": 1710,
+   "price_total": 5130,
    "pax": 3,
    "out": "2026-12-17",
    "ret": "2026-12-31",
