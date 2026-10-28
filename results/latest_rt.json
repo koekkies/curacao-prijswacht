@@ -1,5 +1,5 @@
 {
- "scanned_at": "2026-10-28T21:03:57+00:00",
+ "scanned_at": "2026-10-28T22:03:48+00:00",
  "request": {
   "type": "round_trip",
   "out": [
@@ -10,7 +10,7 @@
   "flex": 0,
   "pax": 3
  },
- "count": 77,
+ "count": 75,
  "flights": [
   {
    "type": "round_trip",
@@ -126,22 +126,6 @@
   },
   {
    "type": "round_trip",
-   "price": 2019,
-   "price_total": 6058,
-   "pax": 3,
-   "out": "2026-12-17",
-   "ret": "2026-12-31",
-   "airline": "KLM, Air Europa, COPA",
-   "direct": false,
-   "stops": 2,
-   "dep_time": "09:40",
-   "arr_time": "12:22",
-   "duration": "31u 42m",
-   "url": "https://www.google.com/travel/flights?q=Flights+to+CUR+from+AMS+on+2026-12-17+through+2026-12-31+for+3+adults&curr=EUR&hl=en&gl=nl",
-   "source": "Google Flights"
-  },
-  {
-   "type": "round_trip",
    "price": 2170,
    "price_total": 6510,
    "pax": 3,
@@ -169,22 +153,6 @@
    "dep_time": "10:25",
    "arr_time": "17:45",
    "duration": "12u 20m",
-   "url": "https://www.google.com/travel/flights?q=Flights+to+CUR+from+AMS+on+2026-12-18+through+2026-12-31+for+3+adults&curr=EUR&hl=en&gl=nl",
-   "source": "Google Flights"
-  },
-  {
-   "type": "round_trip",
-   "price": 2184,
-   "price_total": 6551,
-   "pax": 3,
-   "out": "2026-12-18",
-   "ret": "2026-12-31",
-   "airline": "Air Europa, COPA",
-   "direct": false,
-   "stops": 2,
-   "dep_time": "11:00",
-   "arr_time": "12:22",
-   "duration": "30u 22m",
    "url": "https://www.google.com/travel/flights?q=Flights+to+CUR+from+AMS+on+2026-12-18+through+2026-12-31+for+3+adults&curr=EUR&hl=en&gl=nl",
    "source": "Google Flights"
   },
@@ -326,6 +294,22 @@
    "airline": "Iberia, Avianca",
    "direct": false,
    "stops": 2,
+   "dep_time": "19:55",
+   "arr_time": "10:30",
+   "duration": "19u 35m",
+   "url": "https://www.google.com/travel/flights?q=Flights+to+CUR+from+AMS+on+2026-12-18+through+2026-12-31+for+3+adults&curr=EUR&hl=en&gl=nl",
+   "source": "Google Flights"
+  },
+  {
+   "type": "round_trip",
+   "price": 2804,
+   "price_total": 8411,
+   "pax": 3,
+   "out": "2026-12-18",
+   "ret": "2026-12-31",
+   "airline": "Iberia, Avianca",
+   "direct": false,
+   "stops": 2,
    "dep_time": "12:15",
    "arr_time": "10:30",
    "duration": "27u 15m",
@@ -345,22 +329,6 @@
    "dep_time": "15:50",
    "arr_time": "10:30",
    "duration": "23u 40m",
-   "url": "https://www.google.com/travel/flights?q=Flights+to+CUR+from+AMS+on+2026-12-18+through+2026-12-31+for+3+adults&curr=EUR&hl=en&gl=nl",
-   "source": "Google Flights"
-  },
-  {
-   "type": "round_trip",
-   "price": 2804,
-   "price_total": 8411,
-   "pax": 3,
-   "out": "2026-12-18",
-   "ret": "2026-12-31",
-   "airline": "Iberia, Avianca",
-   "direct": false,
-   "stops": 2,
-   "dep_time": "19:55",
-   "arr_time": "10:30",
-   "duration": "19u 35m",
    "url": "https://www.google.com/travel/flights?q=Flights+to+CUR+from+AMS+on+2026-12-18+through+2026-12-31+for+3+adults&curr=EUR&hl=en&gl=nl",
    "source": "Google Flights"
   },
@@ -1270,13 +1238,13 @@
  },
  "klm_per_day": {},
  "log": [
-  "[2026-12-17 → 2026-12-31] 2026-12-17 → 2026-12-31: 42 vluchten",
+  "[2026-12-17 → 2026-12-31] 2026-12-17 → 2026-12-31: 41 vluchten",
   "[2026-12-17 → 2026-12-31] TUI 2026-12-17 → 2026-12-31: 6 vluchten",
   "[2026-12-17 → 2026-12-31] Corendon.com amsterdam→curacao rond 2026-12-17: 4 vlucht(en)",
   "[2026-12-17 → 2026-12-31] Corendon.com curacao→amsterdam rond 2026-12-31: 4 vlucht(en)",
   "[2026-12-17 → 2026-12-31] KLM 2026-12-17 → 2026-12-31: 0 vluchten (geen antwoord van KLM)",
   "[2026-12-17 → 2026-12-31] 6 vlucht(en) zonder retour weggelaten",
-  "[2026-12-18 → 2026-12-31] 2026-12-18 → 2026-12-31: 42 vluchten",
+  "[2026-12-18 → 2026-12-31] 2026-12-18 → 2026-12-31: 40 vluchten",
   "[2026-12-18 → 2026-12-31] TUI 2026-12-18 → 2026-12-31: 5 vluchten",
   "[2026-12-18 → 2026-12-31] Corendon.com amsterdam→curacao rond 2026-12-18: 4 vlucht(en)",
   "[2026-12-18 → 2026-12-31] Corendon.com curacao→amsterdam rond 2026-12-31: 4 vlucht(en)",
