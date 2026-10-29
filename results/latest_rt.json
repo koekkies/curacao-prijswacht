@@ -1,5 +1,5 @@
 {
- "scanned_at": "2026-10-29T07:44:22+00:00",
+ "scanned_at": "2026-10-29T08:44:36+00:00",
  "request": {
   "type": "round_trip",
   "out": [
@@ -94,6 +94,22 @@
   },
   {
    "type": "round_trip",
+   "price": 1900,
+   "price_total": 5700,
+   "pax": 3,
+   "out": "2026-12-18",
+   "ret": "2026-12-31",
+   "airline": "TUI fly Netherlands",
+   "direct": true,
+   "stops": 0,
+   "dep_time": "11:40",
+   "arr_time": "17:20",
+   "duration": "10u 40m",
+   "url": "https://www.google.com/travel/flights?q=Flights+to+CUR+from+AMS+on+2026-12-18+through+2026-12-31+for+3+adults&curr=EUR&hl=en&gl=nl",
+   "source": "Google Flights"
+  },
+  {
+   "type": "round_trip",
    "price": 2008,
    "price_total": 6023,
    "pax": 3,
@@ -121,22 +137,6 @@
    "dep_time": "13:05",
    "arr_time": "18:05",
    "duration": "10u",
-   "url": "https://www.google.com/travel/flights?q=Flights+to+CUR+from+AMS+on+2026-12-18+through+2026-12-31+for+3+adults&curr=EUR&hl=en&gl=nl",
-   "source": "Google Flights"
-  },
-  {
-   "type": "round_trip",
-   "price": 2150,
-   "price_total": 6450,
-   "pax": 3,
-   "out": "2026-12-18",
-   "ret": "2026-12-31",
-   "airline": "TUI fly Netherlands",
-   "direct": true,
-   "stops": 0,
-   "dep_time": "11:40",
-   "arr_time": "17:20",
-   "duration": "10u 40m",
    "url": "https://www.google.com/travel/flights?q=Flights+to+CUR+from+AMS+on+2026-12-18+through+2026-12-31+for+3+adults&curr=EUR&hl=en&gl=nl",
    "source": "Google Flights"
   },
@@ -1202,10 +1202,10 @@
   "2026-12-15": 760,
   "2026-12-16": 900,
   "2026-12-17": 1000,
-  "2026-12-18": 1450,
+  "2026-12-18": 1200,
   "2026-12-19": 1050,
   "2026-12-20": 1050,
-  "2026-12-21": 1100,
+  "2026-12-21": 1050,
   "2026-12-28": 540,
   "2026-12-29": 690,
   "2026-12-30": 690,
