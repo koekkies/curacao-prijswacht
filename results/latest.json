@@ -1,5 +1,5 @@
 {
- "scanned_at": "2026-10-29T16:41:20+00:00",
+ "scanned_at": "2026-10-29T17:41:16+00:00",
  "request": {
   "type": "one_way",
   "out": "2026-12-18",
@@ -292,7 +292,7 @@
    "arr_time": "17:10",
    "duration": "13u 5m",
    "flight_no": "OR757",
-   "seats_left": 18,
+   "seats_left": 20,
    "url": "https://www.tui.nl/flight/nl/search?flyingFrom%5B%5D=AMS&flyingTo%5B%5D=CUR&depDate=2026-12-16&adults=3&children=0&childAge=&choiceSearch=true&searchType=pricegrid&nearByAirports=true&currency=EUR&isOneWay=true",
    "source": "TUI.nl",
    "pax": null
@@ -397,7 +397,7 @@
    "arr_time": "19:35",
    "duration": "10u 40m",
    "flight_no": "OR371",
-   "seats_left": 20,
+   "seats_left": 19,
    "url": "https://www.tui.nl/flight/nl/search?flyingFrom%5B%5D=AMS&flyingTo%5B%5D=CUR&depDate=2026-12-17&adults=3&children=0&childAge=&choiceSearch=true&searchType=pricegrid&nearByAirports=true&currency=EUR&isOneWay=true",
    "source": "TUI.nl",
    "pax": null
@@ -884,7 +884,7 @@
    "arr_time": "18:35",
    "duration": "12u 35m",
    "flight_no": "OR381",
-   "seats_left": 20,
+   "seats_left": 19,
    "url": "https://www.tui.nl/flight/nl/search?flyingFrom%5B%5D=AMS&flyingTo%5B%5D=CUR&depDate=2026-12-21&adults=3&children=0&childAge=&choiceSearch=true&searchType=pricegrid&nearByAirports=true&currency=EUR&isOneWay=true",
    "source": "TUI.nl",
    "pax": null
