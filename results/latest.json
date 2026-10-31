@@ -1,5 +1,5 @@
 {
- "scanned_at": "2026-10-31T09:42:26+00:00",
+ "scanned_at": "2026-10-31T10:42:37+00:00",
  "request": {
   "type": "one_way",
   "out": "2026-12-18",
@@ -7,7 +7,7 @@
   "flex": 3,
   "pax": 3
  },
- "count": 361,
+ "count": 357,
  "flights": [
   {
    "type": "one_way",
@@ -1740,22 +1740,6 @@
   },
   {
    "type": "one_way",
-   "price": 1491,
-   "price_total": 4472,
-   "pax": 3,
-   "out": "2026-12-16",
-   "ret": null,
-   "airline": "Iberia, Avianca",
-   "direct": false,
-   "stops": 2,
-   "dep_time": "07:10",
-   "arr_time": "10:30",
-   "duration": "32u 20m",
-   "url": "https://www.google.com/travel/flights?q=One+way+flights+to+CUR+from+AMS+on+2026-12-16+for+3+adults&curr=EUR&hl=en&gl=nl",
-   "source": "Google Flights"
-  },
-  {
-   "type": "one_way",
    "price": 1568,
    "price_total": 4704,
    "pax": 3,
@@ -1864,22 +1848,6 @@
    "arr_time": "15:45",
    "duration": "30u",
    "url": "https://www.google.com/travel/flights?q=One+way+flights+to+CUR+from+AMS+on+2026-12-16+for+3+adults&curr=EUR&hl=en&gl=nl",
-   "source": "Google Flights"
-  },
-  {
-   "type": "one_way",
-   "price": 1614,
-   "price_total": 4841,
-   "pax": 3,
-   "out": "2026-12-17",
-   "ret": null,
-   "airline": "Lufthansa, Air Canada",
-   "direct": false,
-   "stops": 2,
-   "dep_time": "14:45",
-   "arr_time": "15:45",
-   "duration": "30u",
-   "url": "https://www.google.com/travel/flights?q=One+way+flights+to+CUR+from+AMS+on+2026-12-17+for+3+adults&curr=EUR&hl=en&gl=nl",
    "source": "Google Flights"
   },
   {
@@ -2292,38 +2260,6 @@
    "arr_time": "17:05",
    "duration": "27u 55m",
    "url": "https://www.google.com/travel/flights?q=One+way+flights+to+CUR+from+AMS+on+2026-12-17+for+3+adults&curr=EUR&hl=en&gl=nl",
-   "source": "Google Flights"
-  },
-  {
-   "type": "one_way",
-   "price": 1701,
-   "price_total": 5102,
-   "pax": 3,
-   "out": "2026-12-21",
-   "ret": null,
-   "airline": "British Airways, Avianca",
-   "direct": false,
-   "stops": 2,
-   "dep_time": "16:10",
-   "arr_time": "10:30",
-   "duration": "23u 20m",
-   "url": "https://www.google.com/travel/flights?q=One+way+flights+to+CUR+from+AMS+on+2026-12-21+for+3+adults&curr=EUR&hl=en&gl=nl",
-   "source": "Google Flights"
-  },
-  {
-   "type": "one_way",
-   "price": 1701,
-   "price_total": 5102,
-   "pax": 3,
-   "out": "2026-12-21",
-   "ret": null,
-   "airline": "British Airways, Avianca",
-   "direct": false,
-   "stops": 2,
-   "dep_time": "18:30",
-   "arr_time": "10:30",
-   "duration": "21u",
-   "url": "https://www.google.com/travel/flights?q=One+way+flights+to+CUR+from+AMS+on+2026-12-21+for+3+adults&curr=EUR&hl=en&gl=nl",
    "source": "Google Flights"
   },
   {
@@ -3203,22 +3139,6 @@
    "price": 2331,
    "price_total": 6992,
    "pax": 3,
-   "out": "2026-12-19",
-   "ret": null,
-   "airline": "Iberia, Avianca",
-   "direct": false,
-   "stops": 2,
-   "dep_time": "07:10",
-   "arr_time": "10:30",
-   "duration": "32u 20m",
-   "url": "https://www.google.com/travel/flights?q=One+way+flights+to+CUR+from+AMS+on+2026-12-19+for+3+adults&curr=EUR&hl=en&gl=nl",
-   "source": "Google Flights"
-  },
-  {
-   "type": "one_way",
-   "price": 2331,
-   "price_total": 6992,
-   "pax": 3,
    "out": "2026-12-20",
    "ret": null,
    "airline": "Iberia, Avianca",
@@ -3708,6 +3628,22 @@
    "arr_time": "10:30",
    "duration": "28u 35m",
    "url": "https://www.google.com/travel/flights?q=One+way+flights+to+CUR+from+AMS+on+2026-12-20+for+3+adults&curr=EUR&hl=en&gl=nl",
+   "source": "Google Flights"
+  },
+  {
+   "type": "one_way",
+   "price": 2960,
+   "price_total": 8879,
+   "pax": 3,
+   "out": "2026-12-17",
+   "ret": null,
+   "airline": "Lufthansa, Air Canada",
+   "direct": false,
+   "stops": 2,
+   "dep_time": "14:45",
+   "arr_time": "15:45",
+   "duration": "30u",
+   "url": "https://www.google.com/travel/flights?q=One+way+flights+to+CUR+from+AMS+on+2026-12-17+for+3+adults&curr=EUR&hl=en&gl=nl",
    "source": "Google Flights"
   },
   {
@@ -5918,12 +5854,12 @@
  },
  "log": [
   "2026-12-15 : 57 vluchten",
-  "2026-12-16 : 37 vluchten",
+  "2026-12-16 : 36 vluchten",
   "2026-12-17 : 48 vluchten",
   "2026-12-18 : 52 vluchten",
-  "2026-12-19 : 47 vluchten",
+  "2026-12-19 : 46 vluchten",
   "2026-12-20 : 53 vluchten",
-  "2026-12-21 : 39 vluchten",
+  "2026-12-21 : 37 vluchten",
   "TUI 2026-12-15: 2 vluchten",
   "TUI 2026-12-16: 2 vluchten",
   "TUI 2026-12-17: 3 vluchten",
