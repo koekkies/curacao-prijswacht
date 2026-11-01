@@ -1,5 +1,5 @@
 {
- "scanned_at": "2026-10-31T23:28:59+00:00",
+ "scanned_at": "2026-11-01T00:30:19+00:00",
  "request": {
   "type": "round_trip",
   "out": [
@@ -10,88 +10,8 @@
   "flex": 0,
   "pax": 3
  },
- "count": 73,
+ "count": 67,
  "flights": [
-  {
-   "type": "round_trip",
-   "price": 1128,
-   "price_total": 3385,
-   "out": "2026-12-18",
-   "ret": "2026-12-31",
-   "airline": "KLM (klm.nl)",
-   "direct": false,
-   "stops": 1,
-   "via": "Panama Stad",
-   "dep_time": "11:20",
-   "arr_time": "12:22",
-   "arr_date": "2026-12-19",
-   "duration": "30u 2m",
-   "flight_no": "KL757",
-   "seats_left": 4,
-   "pax": 3,
-   "url": "https://www.klm.nl/search/offers?pax=3:0:0:0:0:0:0:0&cabinClass=ECONOMY&activeConnection=0&connections=AMS:A:20261218%3ECUR:A-CUR:A:20261231%3EAMS:A&bookingFlow=LEISURE",
-   "source": "KLM.nl"
-  },
-  {
-   "type": "round_trip",
-   "price": 1214,
-   "price_total": 3642,
-   "out": "2026-12-18",
-   "ret": "2026-12-31",
-   "airline": "KLM (klm.nl)",
-   "direct": true,
-   "stops": 0,
-   "via": "",
-   "dep_time": "13:05",
-   "arr_time": "18:05",
-   "arr_date": "2026-12-18",
-   "duration": "10u 0m",
-   "flight_no": "KL733",
-   "seats_left": 9,
-   "pax": 3,
-   "url": "https://www.klm.nl/search/offers?pax=3:0:0:0:0:0:0:0&cabinClass=ECONOMY&activeConnection=0&connections=AMS:A:20261218%3ECUR:A-CUR:A:20261231%3EAMS:A&bookingFlow=LEISURE",
-   "source": "KLM.nl"
-  },
-  {
-   "type": "round_trip",
-   "price": 1222,
-   "price_total": 3667,
-   "out": "2026-12-18",
-   "ret": "2026-12-31",
-   "airline": "KLM (klm.nl)",
-   "direct": false,
-   "stops": 1,
-   "via": "Panama Stad",
-   "dep_time": "14:45",
-   "arr_time": "12:22",
-   "arr_date": "2026-12-19",
-   "duration": "26u 37m",
-   "flight_no": "KL763",
-   "seats_left": 9,
-   "pax": 3,
-   "url": "https://www.klm.nl/search/offers?pax=3:0:0:0:0:0:0:0&cabinClass=ECONOMY&activeConnection=0&connections=AMS:A:20261218%3ECUR:A-CUR:A:20261231%3EAMS:A&bookingFlow=LEISURE",
-   "source": "KLM.nl"
-  },
-  {
-   "type": "round_trip",
-   "price": 1441,
-   "price_total": 4323,
-   "out": "2026-12-18",
-   "ret": "2026-12-31",
-   "airline": "KLM (klm.nl)",
-   "direct": true,
-   "stops": 0,
-   "via": "",
-   "dep_time": "09:55",
-   "arr_time": "14:55",
-   "arr_date": "2026-12-18",
-   "duration": "10u 0m",
-   "flight_no": "KL735",
-   "seats_left": 9,
-   "pax": 3,
-   "url": "https://www.klm.nl/search/offers?pax=3:0:0:0:0:0:0:0&cabinClass=ECONOMY&activeConnection=0&connections=AMS:A:20261218%3ECUR:A-CUR:A:20261231%3EAMS:A&bookingFlow=LEISURE",
-   "source": "KLM.nl"
-  },
   {
    "type": "round_trip",
    "price": 1644,
@@ -107,26 +27,6 @@
    "duration": "10u",
    "url": "https://www.google.com/travel/flights?q=Flights+to+CUR+from+AMS+on+2026-12-17+through+2026-12-31+for+3+adults&curr=EUR&hl=en&gl=nl",
    "source": "Google Flights"
-  },
-  {
-   "type": "round_trip",
-   "price": 1688,
-   "price_total": 5063,
-   "out": "2026-12-18",
-   "ret": "2026-12-31",
-   "airline": "KLM (klm.nl)",
-   "direct": false,
-   "stops": 1,
-   "via": "Sint Maarten",
-   "dep_time": "10:05",
-   "arr_time": "13:45",
-   "arr_date": "2026-12-19",
-   "duration": "32u 40m",
-   "flight_no": "KL787",
-   "seats_left": 8,
-   "pax": 3,
-   "url": "https://www.klm.nl/search/offers?pax=3:0:0:0:0:0:0:0&cabinClass=ECONOMY&activeConnection=0&connections=AMS:A:20261218%3ECUR:A-CUR:A:20261231%3EAMS:A&bookingFlow=LEISURE",
-   "source": "KLM.nl"
   },
   {
    "type": "round_trip",
@@ -223,26 +123,6 @@
    "duration": "10u 40m",
    "url": "https://www.google.com/travel/flights?q=Flights+to+CUR+from+AMS+on+2026-12-18+through+2026-12-31+for+3+adults&curr=EUR&hl=en&gl=nl",
    "source": "Google Flights"
-  },
-  {
-   "type": "round_trip",
-   "price": 1979,
-   "price_total": 5938,
-   "out": "2026-12-18",
-   "ret": "2026-12-31",
-   "airline": "KLM (klm.nl)",
-   "direct": false,
-   "stops": 1,
-   "via": "Aruba",
-   "dep_time": "13:05",
-   "arr_time": "16:20",
-   "arr_date": "2026-12-19",
-   "duration": "32u 15m",
-   "flight_no": "KL767",
-   "seats_left": 9,
-   "pax": 3,
-   "url": "https://www.klm.nl/search/offers?pax=3:0:0:0:0:0:0:0&cabinClass=ECONOMY&activeConnection=0&connections=AMS:A:20261218%3ECUR:A-CUR:A:20261231%3EAMS:A&bookingFlow=LEISURE",
-   "source": "KLM.nl"
   },
   {
    "type": "round_trip",
@@ -1228,9 +1108,7 @@
   "2026-12-19": 893,
   "2026-12-20": 893
  },
- "klm_per_day": {
-  "2026-12-18": 1128
- },
+ "klm_per_day": {},
  "log": [
   "[2026-12-17 → 2026-12-31] 2026-12-17 → 2026-12-31: 35 vluchten",
   "[2026-12-17 → 2026-12-31] TUI 2026-12-17 → 2026-12-31: 6 vluchten",
@@ -1242,7 +1120,7 @@
   "[2026-12-18 → 2026-12-31] TUI 2026-12-18 → 2026-12-31: 5 vluchten",
   "[2026-12-18 → 2026-12-31] Corendon.com amsterdam→curacao rond 2026-12-18: 4 vlucht(en)",
   "[2026-12-18 → 2026-12-31] Corendon.com curacao→amsterdam rond 2026-12-31: 4 vlucht(en)",
-  "[2026-12-18 → 2026-12-31] KLM 2026-12-18 → 2026-12-31: 8 vluchten",
+  "[2026-12-18 → 2026-12-31] KLM 2026-12-18 → 2026-12-31: 0 vluchten (geen antwoord van KLM)",
   "[2026-12-18 → 2026-12-31] 5 vlucht(en) zonder retour weggelaten"
  ]
 }
