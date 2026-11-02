@@ -1,5 +1,5 @@
 {
- "scanned_at": "2026-11-02T12:56:46+00:00",
+ "scanned_at": "2026-11-02T13:59:21+00:00",
  "request": {
   "type": "round_trip",
   "out": [
@@ -1104,7 +1104,7 @@
  "tui_per_day": {
   "2026-12-14": 560,
   "2026-12-15": 720,
-  "2026-12-16": 710,
+  "2026-12-16": 760,
   "2026-12-17": 830,
   "2026-12-18": 1250,
   "2026-12-19": 1450,
@@ -1134,7 +1134,7 @@
   "[2026-12-17 → 2026-12-31] 6 vlucht(en) zonder retour weggelaten",
   "[2026-12-18 → 2026-12-31] 2026-12-18 → 2026-12-31: 34 vluchten",
   "[2026-12-18 → 2026-12-31] TUI 2026-12-18 → 2026-12-31: 5 vluchten",
-  "[2026-12-18 → 2026-12-31] Corendon.com amsterdam→curacao rond 2026-12-18: 4 vlucht(en)",
+  "[2026-12-18 → 2026-12-31] Corendon.com amsterdam→curacao rond 2026-12-18: 0 vlucht(en)",
   "[2026-12-18 → 2026-12-31] Corendon.com curacao→amsterdam rond 2026-12-31: 4 vlucht(en)",
   "[2026-12-18 → 2026-12-31] KLM 2026-12-18 → 2026-12-31: 0 vluchten (geen antwoord van KLM)",
   "[2026-12-18 → 2026-12-31] 5 vlucht(en) zonder retour weggelaten"
