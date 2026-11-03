@@ -16,13 +16,15 @@ import time
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 
+from route import ORIGIN, DEST
+
 OUT_DIR = Path(__file__).resolve().parent / "results"
 
 
 def offers_url(out: date, ret: date | None, pax: int) -> str:
-    conn = f"AMS:A:{out.strftime('%Y%m%d')}%3ECUR:A"
+    conn = f"{ORIGIN}:A:{out.strftime('%Y%m%d')}%3E{DEST}:A"
     if ret:
-        conn += f"-CUR:A:{ret.strftime('%Y%m%d')}%3EAMS:A"
+        conn += f"-{DEST}:A:{ret.strftime('%Y%m%d')}%3E{ORIGIN}:A"
     return (f"https://www.klm.nl/search/offers?pax={pax}:0:0:0:0:0:0:0&cabinClass=ECONOMY"
             f"&activeConnection=0&connections={conn}&bookingFlow=LEISURE")
 

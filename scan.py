@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Curaçao prijswacht - haalt met Scrapling ALLE vluchten AMS -> CUR op Google Flights op
+Curaçao prijswacht - haalt met Scrapling ALLE vluchten ORIGIN -> DEST (zie settings.json) op Google Flights op
 voor de gekozen datum (met speling), inclusief KLM, TUI en Corendon.
 
 Gebruik (lokaal of in GitHub Actions):
@@ -20,7 +20,7 @@ import urllib.parse
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 
-ORIGIN, DEST = "AMS", "CUR"
+from route import ORIGIN, DEST, ADULTS, CHILDREN, PAX
 OUT_DIR = Path(__file__).resolve().parent / "results"
 
 # Google Flights geeft per resultaat een aria-label zoals:
@@ -47,7 +47,9 @@ def build_url(dep: date, ret: date | None, pax: int = 1) -> str:
         q = f"Flights to {DEST} from {ORIGIN} on {dep.isoformat()} through {ret.isoformat()}"
     else:
         q = f"One way flights to {DEST} from {ORIGIN} on {dep.isoformat()}"
-    if pax > 1:
+    if CHILDREN:
+        q += f" for {ADULTS} adults and {CHILDREN} children"
+    elif pax > 1:
         q += f" for {pax} adults"
     params = {"q": q, "curr": "EUR", "hl": "en", "gl": "nl"}
     return "https://www.google.com/travel/flights?" + urllib.parse.urlencode(params)
@@ -160,7 +162,7 @@ def main():
     a = ap.parse_args()
     if not a.pax:
         try:
-            a.pax = int(json.loads((Path(__file__).resolve().parent / "settings.json").read_text()).get("passengers", 1))
+            a.pax = PAX
         except Exception:
             a.pax = 1
 
@@ -201,7 +203,8 @@ def main():
     OUT_DIR.mkdir(exist_ok=True)
     result = {
         "scanned_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
-        "request": {"type": a.type, "out": a.out, "ret": a.ret, "flex": flex, "pax": a.pax},
+        "request": {"type": a.type, "origin": ORIGIN, "dest": DEST, "out": a.out, "ret": a.ret, "flex": flex,
+                    "pax": a.pax, "adults": ADULTS, "children": CHILDREN},
         "count": len(flights),
         "flights": flights,
         "tui_per_day": tui_per_day,

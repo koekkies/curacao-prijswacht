@@ -15,13 +15,16 @@ import urllib.parse
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 
+from route import ORIGIN, DEST, ADULTS, CHILDREN, CHILD_AGES
+
 OUT_DIR = Path(__file__).resolve().parent / "results"
 
 
 def search_url(dep: date, ret: date | None, pax: int = 1) -> str:
     p = {
-        "flyingFrom[]": "AMS", "flyingTo[]": "CUR", "depDate": dep.isoformat(),
-        "adults": str(pax), "children": "0", "childAge": "", "choiceSearch": "true",
+        "flyingFrom[]": ORIGIN, "flyingTo[]": DEST, "depDate": dep.isoformat(),
+        "adults": str(ADULTS if CHILDREN else pax), "children": str(CHILDREN),
+        "childAge": ",".join(str(a) for a in CHILD_AGES), "choiceSearch": "true",
         "searchType": "pricegrid", "nearByAirports": "true", "currency": "EUR",
         "isOneWay": "false" if ret else "true",
     }

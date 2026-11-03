@@ -1,7 +1,16 @@
 {
+  "origin": "CUR",
+  "dest": "AMS",
   "trip_type": "one_way",
-  "out_date": "2026-12-18",
+  "out_date": "2026-12-31",
   "ret_date": "",
-  "flex_days": 3,
-  "passengers": 3
+  "flex_days": 0,
+  "adults": 2,
+  "children": 3,
+  "child_ages": [
+    3,
+    6,
+    9
+  ],
+  "passengers": 5
 }

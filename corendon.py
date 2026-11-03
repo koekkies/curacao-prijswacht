@@ -15,9 +15,11 @@ import time
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 
+from route import ORIGIN, DEST, ORIGIN_SLUG, DEST_SLUG
+
 OUT_DIR = Path(__file__).resolve().parent / "results"
 BASE = "https://www.corendonairlines.com/flight/list"
-NL_BASE = "https://www.corendon.com/nl/flights/amsterdam/curacao"
+NL_BASE = f"https://www.corendon.com/nl/flights/{ORIGIN_SLUG}/{DEST_SLUG}"
 MONTHS_NL = {"jan": 1, "feb": 2, "mrt": 3, "mar": 3, "apr": 4, "mei": 5, "jun": 6, "jul": 7, "aug": 8,
              "sep": 9, "okt": 10, "nov": 11, "dec": 12}
 
@@ -148,7 +150,7 @@ def nl_parse(page, url: str, anchor: date, pax: int) -> tuple[list[dict], dict]:
     return flights, per_day
 
 
-def nl_scan(session, out: date, flex: int, pax: int, log: list, org="amsterdam", dst="curacao") -> tuple[list, dict]:
+def nl_scan(session, out: date, flex: int, pax: int, log: list, org=ORIGIN_SLUG, dst=DEST_SLUG) -> tuple[list, dict]:
     flights, per_day = [], {}
     anchors = sorted({out + timedelta(days=x) for x in (-flex, 0, flex) if out + timedelta(days=x) > date.today()})
     for a in anchors:
@@ -185,7 +187,7 @@ def corendon_scan(trip_type: str, out: date, ret: date | None, flex: int, pax: i
         offers = in_window if (in_window or trip_type == "round_trip") else outbound
         if trip_type == "round_trip":
             r = ret or (out + timedelta(days=14))
-            inbound, _ = nl_scan(s, r, flex, pax, log, org="curacao", dst="amsterdam")
+            inbound, _ = nl_scan(s, r, flex, pax, log, org=DEST_SLUG, dst=ORIGIN_SLUG)
             rlo, rhi = (r - timedelta(days=flex)).isoformat(), (r + timedelta(days=flex)).isoformat()
             inbound = [b for b in inbound if rlo <= b["out"] <= rhi]
             combos = []
@@ -210,12 +212,12 @@ def corendon_airlines_scan(trip_type: str, out: date, ret: date | None, flex: in
     log: list[str] = []
     out_days = [d for d in (out + timedelta(days=i) for i in range(-flex, flex + 1)) if d > date.today()]
     with StealthySession(headless=True) as s:
-        outbound, per_day = leg_scan(s, "AMS", "CUR", out_days, log)
+        outbound, per_day = leg_scan(s, ORIGIN, DEST, out_days, log)
         offers = [f for f in outbound if not f["sold_out"]]
         if trip_type == "round_trip":
             r = ret or (out + timedelta(days=14))
             ret_days = [d for d in (r + timedelta(days=i) for i in range(-flex, flex + 1)) if d > out]
-            inbound, _ = leg_scan(s, "CUR", "AMS", ret_days, log)
+            inbound, _ = leg_scan(s, DEST, ORIGIN, ret_days, log)
             inb = [f for f in inbound if not f["sold_out"]]
             combos = []
             for o in offers:
