@@ -1,5 +1,5 @@
 {
- "scanned_at": "2026-11-03T21:00:51+00:00",
+ "scanned_at": "2026-11-03T22:00:44+00:00",
  "request": {
   "type": "one_way",
   "origin": "CUR",
@@ -301,7 +301,7 @@
   {
    "type": "one_way",
    "price": 1107,
-   "price_total": 5534,
+   "price_total": 5533,
    "pax": 5,
    "out": "2026-12-31",
    "ret": null,
@@ -317,7 +317,7 @@
   {
    "type": "one_way",
    "price": 1282,
-   "price_total": 6410,
+   "price_total": 6409,
    "pax": 5,
    "out": "2026-12-31",
    "ret": null,
@@ -333,7 +333,7 @@
   {
    "type": "one_way",
    "price": 1420,
-   "price_total": 7101,
+   "price_total": 7100,
    "pax": 5,
    "out": "2026-12-31",
    "ret": null,
@@ -349,7 +349,7 @@
   {
    "type": "one_way",
    "price": 1510,
-   "price_total": 7550,
+   "price_total": 7549,
    "pax": 5,
    "out": "2026-12-31",
    "ret": null,
@@ -364,8 +364,8 @@
   },
   {
    "type": "one_way",
-   "price": 3335,
-   "price_total": 16675,
+   "price": 3334,
+   "price_total": 16672,
    "pax": 5,
    "out": "2026-12-31",
    "ret": null,
@@ -383,9 +383,9 @@
   "2026-12-28": 540,
   "2026-12-29": 690,
   "2026-12-30": 690,
-  "2026-12-31": 600,
+  "2026-12-31": 690,
   "2027-01-01": 1100,
-  "2027-01-02": 1131,
+  "2027-01-02": 1300,
   "2027-01-03": 940
  },
  "corendon_per_day": {
