@@ -1,5 +1,5 @@
 {
- "scanned_at": "2026-11-03T19:00:50+00:00",
+ "scanned_at": "2026-11-03T20:00:53+00:00",
  "request": {
   "type": "one_way",
   "origin": "CUR",
@@ -37,7 +37,7 @@
   {
    "type": "one_way",
    "price": 636,
-   "price_total": 3179,
+   "price_total": 3181,
    "pax": 5,
    "out": "2026-12-31",
    "ret": null,
@@ -53,7 +53,7 @@
   {
    "type": "one_way",
    "price": 636,
-   "price_total": 3179,
+   "price_total": 3181,
    "pax": 5,
    "out": "2026-12-31",
    "ret": null,
@@ -69,7 +69,7 @@
   {
    "type": "one_way",
    "price": 636,
-   "price_exact": 636.1699999999998,
+   "price_exact": 636.17,
    "out": "2026-12-31",
    "ret": null,
    "airline": "TUI (tui.nl)",
@@ -138,8 +138,8 @@
   },
   {
    "type": "one_way",
-   "price": 690,
-   "price_total": 3451,
+   "price": 691,
+   "price_total": 3453,
    "pax": 5,
    "out": "2026-12-31",
    "ret": null,
@@ -154,8 +154,8 @@
   },
   {
    "type": "one_way",
-   "price": 690,
-   "price_total": 3451,
+   "price": 691,
+   "price_total": 3453,
    "pax": 5,
    "out": "2026-12-31",
    "ret": null,
@@ -171,7 +171,7 @@
   {
    "type": "one_way",
    "price": 754,
-   "price_total": 3769,
+   "price_total": 3771,
    "pax": 5,
    "out": "2026-12-31",
    "ret": null,
@@ -187,7 +187,7 @@
   {
    "type": "one_way",
    "price": 765,
-   "price_total": 3824,
+   "price_total": 3826,
    "pax": 5,
    "out": "2026-12-31",
    "ret": null,
@@ -300,8 +300,8 @@
   },
   {
    "type": "one_way",
-   "price": 1106,
-   "price_total": 5530,
+   "price": 1107,
+   "price_total": 5533,
    "pax": 5,
    "out": "2026-12-31",
    "ret": null,
@@ -316,8 +316,8 @@
   },
   {
    "type": "one_way",
-   "price": 1281,
-   "price_total": 6405,
+   "price": 1282,
+   "price_total": 6409,
    "pax": 5,
    "out": "2026-12-31",
    "ret": null,
@@ -332,8 +332,8 @@
   },
   {
    "type": "one_way",
-   "price": 1419,
-   "price_total": 7096,
+   "price": 1420,
+   "price_total": 7100,
    "pax": 5,
    "out": "2026-12-31",
    "ret": null,
@@ -348,8 +348,8 @@
   },
   {
    "type": "one_way",
-   "price": 1509,
-   "price_total": 7545,
+   "price": 1510,
+   "price_total": 7549,
    "pax": 5,
    "out": "2026-12-31",
    "ret": null,
@@ -364,8 +364,8 @@
   },
   {
    "type": "one_way",
-   "price": 3333,
-   "price_total": 16663,
+   "price": 3334,
+   "price_total": 16672,
    "pax": 5,
    "out": "2026-12-31",
    "ret": null,
@@ -383,8 +383,8 @@
   "2026-12-28": 540,
   "2026-12-29": 690,
   "2026-12-30": 690,
-  "2026-12-31": 690,
-  "2027-01-01": 1100,
+  "2026-12-31": 600,
+  "2027-01-01": 957,
   "2027-01-02": 1300,
   "2027-01-03": 940
  },
