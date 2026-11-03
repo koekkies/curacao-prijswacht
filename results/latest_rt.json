@@ -1,5 +1,5 @@
 {
- "scanned_at": "2026-11-03T04:34:05+00:00",
+ "scanned_at": "2026-11-03T05:33:43+00:00",
  "request": {
   "type": "round_trip",
   "out": [
@@ -206,8 +206,8 @@
   },
   {
    "type": "round_trip",
-   "price": 2143,
-   "price_total": 6428,
+   "price": 2392,
+   "price_total": 7175,
    "pax": 3,
    "out": "2026-12-17",
    "ret": "2026-12-31",
