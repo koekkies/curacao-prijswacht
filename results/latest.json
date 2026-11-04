@@ -1,5 +1,5 @@
 {
- "scanned_at": "2026-11-04T07:46:11+00:00",
+ "scanned_at": "2026-11-04T08:46:03+00:00",
  "request": {
   "type": "one_way",
   "origin": "CUR",
@@ -74,8 +74,8 @@
   },
   {
    "type": "one_way",
-   "price": 638,
-   "price_total": 3189,
+   "price": 637,
+   "price_total": 3185,
    "pax": 5,
    "out": "2026-12-31",
    "ret": null,
@@ -90,8 +90,8 @@
   },
   {
    "type": "one_way",
-   "price": 638,
-   "price_total": 3189,
+   "price": 637,
+   "price_total": 3185,
    "pax": 5,
    "out": "2026-12-31",
    "ret": null,
@@ -138,8 +138,8 @@
   },
   {
    "type": "one_way",
-   "price": 692,
-   "price_total": 3462,
+   "price": 691,
+   "price_total": 3457,
    "pax": 5,
    "out": "2026-12-31",
    "ret": null,
@@ -154,8 +154,8 @@
   },
   {
    "type": "one_way",
-   "price": 692,
-   "price_total": 3462,
+   "price": 691,
+   "price_total": 3457,
    "pax": 5,
    "out": "2026-12-31",
    "ret": null,
@@ -170,8 +170,8 @@
   },
   {
    "type": "one_way",
-   "price": 756,
-   "price_total": 3781,
+   "price": 755,
+   "price_total": 3775,
    "pax": 5,
    "out": "2026-12-31",
    "ret": null,
@@ -263,8 +263,8 @@
   },
   {
    "type": "one_way",
-   "price": 1025,
-   "price_total": 5125,
+   "price": 1024,
+   "price_total": 5118,
    "pax": 5,
    "out": "2026-12-31",
    "ret": null,
@@ -300,8 +300,8 @@
   },
   {
    "type": "one_way",
-   "price": 1286,
-   "price_total": 6431,
+   "price": 1284,
+   "price_total": 6422,
    "pax": 5,
    "out": "2026-12-31",
    "ret": null,
@@ -316,8 +316,8 @@
   },
   {
    "type": "one_way",
-   "price": 1424,
-   "price_total": 7120,
+   "price": 1422,
+   "price_total": 7109,
    "pax": 5,
    "out": "2026-12-31",
    "ret": null,
@@ -332,8 +332,8 @@
   },
   {
    "type": "one_way",
-   "price": 1514,
-   "price_total": 7570,
+   "price": 1512,
+   "price_total": 7558,
    "pax": 5,
    "out": "2026-12-31",
    "ret": null,
@@ -348,8 +348,8 @@
   },
   {
    "type": "one_way",
-   "price": 3344,
-   "price_total": 16718,
+   "price": 3339,
+   "price_total": 16693,
    "pax": 5,
    "out": "2026-12-31",
    "ret": null,
@@ -364,13 +364,13 @@
   }
  ],
  "tui_per_day": {
-  "2026-12-28": 540,
+  "2026-12-28": 470,
   "2026-12-29": 690,
-  "2026-12-30": 600,
-  "2026-12-31": 600,
-  "2027-01-01": 1100,
-  "2027-01-02": 1300,
-  "2027-01-03": 940
+  "2026-12-30": 690,
+  "2026-12-31": 690,
+  "2027-01-01": 957,
+  "2027-01-02": 1100,
+  "2027-01-03": 818
  },
  "corendon_per_day": {
   "2026-12-30": 592,
