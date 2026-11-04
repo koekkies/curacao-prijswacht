@@ -1,5 +1,5 @@
 {
- "scanned_at": "2026-11-04T05:30:30+00:00",
+ "scanned_at": "2026-11-04T06:30:32+00:00",
  "request": {
   "type": "one_way",
   "origin": "CUR",
@@ -37,7 +37,7 @@
   {
    "type": "one_way",
    "price": 636,
-   "price_exact": 636.1699999999998,
+   "price_exact": 636.17,
    "out": "2026-12-31",
    "ret": null,
    "airline": "TUI (tui.nl)",
@@ -74,8 +74,8 @@
   },
   {
    "type": "one_way",
-   "price": 638,
-   "price_total": 3188,
+   "price": 637,
+   "price_total": 3187,
    "pax": 5,
    "out": "2026-12-31",
    "ret": null,
@@ -90,8 +90,8 @@
   },
   {
    "type": "one_way",
-   "price": 638,
-   "price_total": 3188,
+   "price": 637,
+   "price_total": 3187,
    "pax": 5,
    "out": "2026-12-31",
    "ret": null,
@@ -106,8 +106,8 @@
   },
   {
    "type": "one_way",
-   "price": 691,
-   "price_total": 3455,
+   "price": 690,
+   "price_total": 3449,
    "pax": 5,
    "out": "2026-12-31",
    "ret": null,
@@ -122,8 +122,8 @@
   },
   {
    "type": "one_way",
-   "price": 691,
-   "price_total": 3455,
+   "price": 690,
+   "price_total": 3449,
    "pax": 5,
    "out": "2026-12-31",
    "ret": null,
@@ -139,7 +139,7 @@
   {
    "type": "one_way",
    "price": 692,
-   "price_total": 3461,
+   "price_total": 3460,
    "pax": 5,
    "out": "2026-12-31",
    "ret": null,
@@ -155,7 +155,7 @@
   {
    "type": "one_way",
    "price": 692,
-   "price_total": 3461,
+   "price_total": 3460,
    "pax": 5,
    "out": "2026-12-31",
    "ret": null,
@@ -171,7 +171,7 @@
   {
    "type": "one_way",
    "price": 756,
-   "price_total": 3779,
+   "price_total": 3778,
    "pax": 5,
    "out": "2026-12-31",
    "ret": null,
@@ -187,7 +187,7 @@
   {
    "type": "one_way",
    "price": 767,
-   "price_total": 3835,
+   "price_total": 3833,
    "pax": 5,
    "out": "2026-12-31",
    "ret": null,
@@ -221,8 +221,8 @@
   },
   {
    "type": "one_way",
-   "price": 921,
-   "price_total": 4607,
+   "price": 920,
+   "price_total": 4599,
    "pax": 5,
    "out": "2026-12-31",
    "ret": null,
@@ -279,6 +279,22 @@
   },
   {
    "type": "one_way",
+   "price": 1024,
+   "price_total": 5121,
+   "pax": 5,
+   "out": "2026-12-31",
+   "ret": null,
+   "airline": "Avianca, Iberia",
+   "direct": false,
+   "stops": 2,
+   "dep_time": "18:20",
+   "arr_time": "18:55",
+   "duration": "19u 35m",
+   "url": "https://www.google.com/travel/flights?q=One+way+flights+to+AMS+from+CUR+on+2026-12-31+for+2+adults+and+3+children&curr=EUR&hl=en&gl=nl",
+   "source": "Google Flights"
+  },
+  {
+   "type": "one_way",
    "price": 1078,
    "price_exact": 1078.0,
    "sold_out": false,
@@ -300,24 +316,8 @@
   },
   {
    "type": "one_way",
-   "price": 1109,
-   "price_total": 5546,
-   "pax": 5,
-   "out": "2026-12-31",
-   "ret": null,
-   "airline": "Avianca, Iberia",
-   "direct": false,
-   "stops": 2,
-   "dep_time": "18:20",
-   "arr_time": "18:55",
-   "duration": "19u 35m",
-   "url": "https://www.google.com/travel/flights?q=One+way+flights+to+AMS+from+CUR+on+2026-12-31+for+2+adults+and+3+children&curr=EUR&hl=en&gl=nl",
-   "source": "Google Flights"
-  },
-  {
-   "type": "one_way",
-   "price": 1286,
-   "price_total": 6429,
+   "price": 1285,
+   "price_total": 6426,
    "pax": 5,
    "out": "2026-12-31",
    "ret": null,
@@ -333,7 +333,7 @@
   {
    "type": "one_way",
    "price": 1423,
-   "price_total": 7116,
+   "price_total": 7114,
    "pax": 5,
    "out": "2026-12-31",
    "ret": null,
@@ -349,7 +349,7 @@
   {
    "type": "one_way",
    "price": 1513,
-   "price_total": 7566,
+   "price_total": 7564,
    "pax": 5,
    "out": "2026-12-31",
    "ret": null,
@@ -364,8 +364,8 @@
   },
   {
    "type": "one_way",
-   "price": 3342,
-   "price_total": 16711,
+   "price": 3341,
+   "price_total": 16705,
    "pax": 5,
    "out": "2026-12-31",
    "ret": null,
@@ -381,11 +381,11 @@
  ],
  "tui_per_day": {
   "2026-12-28": 540,
-  "2026-12-29": 690,
-  "2026-12-30": 690,
-  "2026-12-31": 600,
-  "2027-01-01": 957,
-  "2027-01-02": 1261,
+  "2026-12-29": 600,
+  "2026-12-30": 600,
+  "2026-12-31": 690,
+  "2027-01-01": 1100,
+  "2027-01-02": 1300,
   "2027-01-03": 940
  },
  "corendon_per_day": {
