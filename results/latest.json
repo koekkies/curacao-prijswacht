@@ -1,5 +1,5 @@
 {
- "scanned_at": "2026-11-05T18:49:26+00:00",
+ "scanned_at": "2026-11-05T19:49:25+00:00",
  "request": {
   "type": "one_way",
   "origin": "CUR",
@@ -106,8 +106,8 @@
   },
   {
    "type": "one_way",
-   "price": 751,
-   "price_total": 3757,
+   "price": 752,
+   "price_total": 3760,
    "pax": 5,
    "out": "2026-12-31",
    "ret": null,
@@ -122,8 +122,8 @@
   },
   {
    "type": "one_way",
-   "price": 762,
-   "price_total": 3812,
+   "price": 763,
+   "price_total": 3815,
    "pax": 5,
    "out": "2026-12-31",
    "ret": null,
@@ -236,8 +236,8 @@
   },
   {
    "type": "one_way",
-   "price": 1110,
-   "price_total": 5551,
+   "price": 1111,
+   "price_total": 5556,
    "pax": 5,
    "out": "2026-12-31",
    "ret": null,
@@ -252,8 +252,8 @@
   },
   {
    "type": "one_way",
-   "price": 1160,
-   "price_total": 5800,
+   "price": 1161,
+   "price_total": 5806,
    "pax": 5,
    "out": "2026-12-31",
    "ret": null,
@@ -268,8 +268,8 @@
   },
   {
    "type": "one_way",
-   "price": 1278,
-   "price_total": 6390,
+   "price": 1279,
+   "price_total": 6396,
    "pax": 5,
    "out": "2026-12-31",
    "ret": null,
@@ -284,8 +284,8 @@
   },
   {
    "type": "one_way",
-   "price": 1603,
-   "price_total": 8016,
+   "price": 1605,
+   "price_total": 8024,
    "pax": 5,
    "out": "2026-12-31",
    "ret": null,
@@ -300,8 +300,8 @@
   },
   {
    "type": "one_way",
-   "price": 1723,
-   "price_total": 8615,
+   "price": 1725,
+   "price_total": 8623,
    "pax": 5,
    "out": "2026-12-31",
    "ret": null,
@@ -316,8 +316,8 @@
   },
   {
    "type": "one_way",
-   "price": 3322,
-   "price_total": 16610,
+   "price": 3325,
+   "price_total": 16625,
    "pax": 5,
    "out": "2026-12-31",
    "ret": null,
@@ -333,12 +333,12 @@
  ],
  "tui_per_day": {
   "2026-12-28": 540,
-  "2026-12-29": 690,
+  "2026-12-29": 600,
   "2026-12-30": 690,
   "2026-12-31": 690,
-  "2027-01-01": 1100,
+  "2027-01-01": 957,
   "2027-01-02": 1050,
-  "2027-01-03": 940
+  "2027-01-03": 818
  },
  "corendon_per_day": {
   "2026-12-30": 592,
