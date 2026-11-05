@@ -1,5 +1,5 @@
 {
- "scanned_at": "2026-11-05T05:05:23+00:00",
+ "scanned_at": "2026-11-05T06:04:50+00:00",
  "request": {
   "type": "one_way",
   "origin": "CUR",
@@ -11,7 +11,7 @@
   "adults": 2,
   "children": 3
  },
- "count": 10,
+ "count": 17,
  "flights": [
   {
    "type": "one_way",
@@ -82,8 +82,8 @@
    "airline": "TUI fly Netherlands",
    "direct": true,
    "stops": 0,
-   "dep_time": "17:50",
-   "arr_time": "08:40",
+   "dep_time": "20:35",
+   "arr_time": "11:25",
    "duration": "9u 50m",
    "url": "https://www.google.com/travel/flights?q=One+way+flights+to+AMS+from+CUR+on+2026-12-31+for+2+adults+and+3+children&curr=EUR&hl=en&gl=nl",
    "source": "Google Flights"
@@ -98,9 +98,41 @@
    "airline": "TUI fly Netherlands",
    "direct": true,
    "stops": 0,
-   "dep_time": "20:35",
-   "arr_time": "11:25",
+   "dep_time": "17:50",
+   "arr_time": "08:40",
    "duration": "9u 50m",
+   "url": "https://www.google.com/travel/flights?q=One+way+flights+to+AMS+from+CUR+on+2026-12-31+for+2+adults+and+3+children&curr=EUR&hl=en&gl=nl",
+   "source": "Google Flights"
+  },
+  {
+   "type": "one_way",
+   "price": 750,
+   "price_total": 3749,
+   "pax": 5,
+   "out": "2026-12-31",
+   "ret": null,
+   "airline": "KLM",
+   "direct": true,
+   "stops": 0,
+   "dep_time": "17:50",
+   "arr_time": "08:00",
+   "duration": "9u 10m",
+   "url": "https://www.google.com/travel/flights?q=One+way+flights+to+AMS+from+CUR+on+2026-12-31+for+2+adults+and+3+children&curr=EUR&hl=en&gl=nl",
+   "source": "Google Flights"
+  },
+  {
+   "type": "one_way",
+   "price": 761,
+   "price_total": 3804,
+   "pax": 5,
+   "out": "2026-12-31",
+   "ret": null,
+   "airline": "Winair, Air France",
+   "direct": false,
+   "stops": 2,
+   "dep_time": "12:45",
+   "arr_time": "13:10",
+   "duration": "19u 25m",
    "url": "https://www.google.com/travel/flights?q=One+way+flights+to+AMS+from+CUR+on+2026-12-31+for+2+adults+and+3+children&curr=EUR&hl=en&gl=nl",
    "source": "Google Flights"
   },
@@ -201,16 +233,96 @@
    "pax": 5,
    "url": "https://www.corendon.com/nl/flights/curacao/amsterdam/20261231?passenger=5&infant=0",
    "source": "Corendon.com"
+  },
+  {
+   "type": "one_way",
+   "price": 1100,
+   "price_total": 5501,
+   "pax": 5,
+   "out": "2026-12-31",
+   "ret": null,
+   "airline": "Avianca, Iberia",
+   "direct": false,
+   "stops": 2,
+   "dep_time": "18:20",
+   "arr_time": "18:55",
+   "duration": "19u 35m",
+   "url": "https://www.google.com/travel/flights?q=One+way+flights+to+AMS+from+CUR+on+2026-12-31+for+2+adults+and+3+children&curr=EUR&hl=en&gl=nl",
+   "source": "Google Flights"
+  },
+  {
+   "type": "one_way",
+   "price": 1275,
+   "price_total": 6376,
+   "pax": 5,
+   "out": "2026-12-31",
+   "ret": null,
+   "airline": "Avianca, Lufthansa",
+   "direct": false,
+   "stops": 2,
+   "dep_time": "18:20",
+   "arr_time": "22:35",
+   "duration": "23u 15m",
+   "url": "https://www.google.com/travel/flights?q=One+way+flights+to+AMS+from+CUR+on+2026-12-31+for+2+adults+and+3+children&curr=EUR&hl=en&gl=nl",
+   "source": "Google Flights"
+  },
+  {
+   "type": "one_way",
+   "price": 1501,
+   "price_total": 7505,
+   "pax": 5,
+   "out": "2026-12-31",
+   "ret": null,
+   "airline": "American, British Airways",
+   "direct": false,
+   "stops": 2,
+   "dep_time": "17:43",
+   "arr_time": "10:40",
+   "duration": "35u 57m",
+   "url": "https://www.google.com/travel/flights?q=One+way+flights+to+AMS+from+CUR+on+2026-12-31+for+2+adults+and+3+children&curr=EUR&hl=en&gl=nl",
+   "source": "Google Flights"
+  },
+  {
+   "type": "one_way",
+   "price": 1600,
+   "price_total": 7999,
+   "pax": 5,
+   "out": "2026-12-31",
+   "ret": null,
+   "airline": "Avianca, British Airways",
+   "direct": false,
+   "stops": 2,
+   "dep_time": "18:20",
+   "arr_time": "19:35",
+   "duration": "20u 15m",
+   "url": "https://www.google.com/travel/flights?q=One+way+flights+to+AMS+from+CUR+on+2026-12-31+for+2+adults+and+3+children&curr=EUR&hl=en&gl=nl",
+   "source": "Google Flights"
+  },
+  {
+   "type": "one_way",
+   "price": 3315,
+   "price_total": 16575,
+   "pax": 5,
+   "out": "2026-12-31",
+   "ret": null,
+   "airline": "COPA, KLM",
+   "direct": false,
+   "stops": 1,
+   "dep_time": "15:37",
+   "arr_time": "11:10",
+   "duration": "14u 33m",
+   "url": "https://www.google.com/travel/flights?q=One+way+flights+to+AMS+from+CUR+on+2026-12-31+for+2+adults+and+3+children&curr=EUR&hl=en&gl=nl",
+   "source": "Google Flights"
   }
  ],
  "tui_per_day": {
-  "2026-12-28": 470,
+  "2026-12-28": 540,
   "2026-12-29": 690,
   "2026-12-30": 690,
   "2026-12-31": 690,
   "2027-01-01": 1100,
   "2027-01-02": 1100,
-  "2027-01-03": 940
+  "2027-01-03": 818
  },
  "corendon_per_day": {
   "2026-12-30": 592,
@@ -220,7 +332,7 @@
  },
  "klm_per_day": {},
  "log": [
-  "2026-12-31 : 3 vluchten",
+  "2026-12-31 : 10 vluchten",
   "TUI 2026-12-31: 3 vluchten",
   "Corendon.com curacao→amsterdam rond 2026-12-31: 4 vlucht(en)",
   "KLM 2026-12-31: 0 vluchten (geen antwoord van KLM)"
