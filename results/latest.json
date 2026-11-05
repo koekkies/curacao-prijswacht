@@ -1,5 +1,5 @@
 {
- "scanned_at": "2026-11-05T16:36:13+00:00",
+ "scanned_at": "2026-11-05T17:36:06+00:00",
  "request": {
   "type": "one_way",
   "origin": "CUR",
@@ -37,7 +37,7 @@
   {
    "type": "one_way",
    "price": 636,
-   "price_exact": 636.1699999999998,
+   "price_exact": 636.17,
    "out": "2026-12-31",
    "ret": null,
    "airline": "TUI (tui.nl)",
@@ -106,8 +106,8 @@
   },
   {
    "type": "one_way",
-   "price": 753,
-   "price_total": 3764,
+   "price": 751,
+   "price_total": 3757,
    "pax": 5,
    "out": "2026-12-31",
    "ret": null,
@@ -122,8 +122,8 @@
   },
   {
    "type": "one_way",
-   "price": 764,
-   "price_total": 3819,
+   "price": 762,
+   "price_total": 3812,
    "pax": 5,
    "out": "2026-12-31",
    "ret": null,
@@ -236,8 +236,8 @@
   },
   {
    "type": "one_way",
-   "price": 1112,
-   "price_total": 5561,
+   "price": 1110,
+   "price_total": 5551,
    "pax": 5,
    "out": "2026-12-31",
    "ret": null,
@@ -252,8 +252,8 @@
   },
   {
    "type": "one_way",
-   "price": 1162,
-   "price_total": 5811,
+   "price": 1160,
+   "price_total": 5801,
    "pax": 5,
    "out": "2026-12-31",
    "ret": null,
@@ -268,8 +268,8 @@
   },
   {
    "type": "one_way",
-   "price": 1280,
-   "price_total": 6401,
+   "price": 1278,
+   "price_total": 6390,
    "pax": 5,
    "out": "2026-12-31",
    "ret": null,
@@ -284,8 +284,8 @@
   },
   {
    "type": "one_way",
-   "price": 1606,
-   "price_total": 8031,
+   "price": 1603,
+   "price_total": 8017,
    "pax": 5,
    "out": "2026-12-31",
    "ret": null,
@@ -300,8 +300,8 @@
   },
   {
    "type": "one_way",
-   "price": 1726,
-   "price_total": 8631,
+   "price": 1723,
+   "price_total": 8616,
    "pax": 5,
    "out": "2026-12-31",
    "ret": null,
@@ -316,8 +316,8 @@
   },
   {
    "type": "one_way",
-   "price": 3328,
-   "price_total": 16640,
+   "price": 3322,
+   "price_total": 16611,
    "pax": 5,
    "out": "2026-12-31",
    "ret": null,
@@ -334,10 +334,10 @@
  "tui_per_day": {
   "2026-12-28": 540,
   "2026-12-29": 690,
-  "2026-12-30": 690,
-  "2026-12-31": 600,
-  "2027-01-01": 1100,
-  "2027-01-02": 1050,
+  "2026-12-30": 600,
+  "2026-12-31": 690,
+  "2027-01-01": 1000,
+  "2027-01-02": 957,
   "2027-01-03": 940
  },
  "corendon_per_day": {
