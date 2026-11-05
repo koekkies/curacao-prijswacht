@@ -1,5 +1,5 @@
 {
- "scanned_at": "2026-11-05T01:49:06+00:00",
+ "scanned_at": "2026-11-05T02:49:13+00:00",
  "request": {
   "type": "one_way",
   "origin": "CUR",
@@ -56,7 +56,7 @@
   {
    "type": "one_way",
    "price": 636,
-   "price_exact": 636.17,
+   "price_exact": 636.1699999999998,
    "out": "2026-12-31",
    "ret": null,
    "airline": "TUI (tui.nl)",
@@ -106,8 +106,8 @@
   },
   {
    "type": "one_way",
-   "price": 751,
-   "price_total": 3754,
+   "price": 750,
+   "price_total": 3751,
    "pax": 5,
    "out": "2026-12-31",
    "ret": null,
@@ -122,8 +122,8 @@
   },
   {
    "type": "one_way",
-   "price": 762,
-   "price_total": 3808,
+   "price": 761,
+   "price_total": 3806,
    "pax": 5,
    "out": "2026-12-31",
    "ret": null,
@@ -139,7 +139,7 @@
   {
    "type": "one_way",
    "price": 824,
-   "price_total": 4120,
+   "price_total": 4118,
    "pax": 5,
    "out": "2026-12-31",
    "ret": null,
@@ -252,8 +252,8 @@
   },
   {
    "type": "one_way",
-   "price": 1102,
-   "price_total": 5508,
+   "price": 1101,
+   "price_total": 5504,
    "pax": 5,
    "out": "2026-12-31",
    "ret": null,
@@ -269,7 +269,7 @@
   {
    "type": "one_way",
    "price": 1277,
-   "price_total": 6387,
+   "price_total": 6383,
    "pax": 5,
    "out": "2026-12-31",
    "ret": null,
@@ -284,8 +284,24 @@
   },
   {
    "type": "one_way",
-   "price": 1602,
-   "price_total": 8010,
+   "price": 1502,
+   "price_total": 7510,
+   "pax": 5,
+   "out": "2026-12-31",
+   "ret": null,
+   "airline": "American, British Airways",
+   "direct": false,
+   "stops": 2,
+   "dep_time": "17:43",
+   "arr_time": "10:40",
+   "duration": "35u 57m",
+   "url": "https://www.google.com/travel/flights?q=One+way+flights+to+AMS+from+CUR+on+2026-12-31+for+2+adults+and+3+children&curr=EUR&hl=en&gl=nl",
+   "source": "Google Flights"
+  },
+  {
+   "type": "one_way",
+   "price": 1601,
+   "price_total": 8005,
    "pax": 5,
    "out": "2026-12-31",
    "ret": null,
@@ -300,24 +316,8 @@
   },
   {
    "type": "one_way",
-   "price": 1722,
-   "price_total": 8608,
-   "pax": 5,
-   "out": "2026-12-31",
-   "ret": null,
-   "airline": "American, British Airways",
-   "direct": false,
-   "stops": 2,
-   "dep_time": "17:43",
-   "arr_time": "16:10",
-   "duration": "17u 27m",
-   "url": "https://www.google.com/travel/flights?q=One+way+flights+to+AMS+from+CUR+on+2026-12-31+for+2+adults+and+3+children&curr=EUR&hl=en&gl=nl",
-   "source": "Google Flights"
-  },
-  {
-   "type": "one_way",
-   "price": 3319,
-   "price_total": 16596,
+   "price": 3317,
+   "price_total": 16586,
    "pax": 5,
    "out": "2026-12-31",
    "ret": null,
@@ -337,7 +337,7 @@
   "2026-12-30": 690,
   "2026-12-31": 690,
   "2027-01-01": 1100,
-  "2027-01-02": 957,
+  "2027-01-02": 1100,
   "2027-01-03": 940
  },
  "corendon_per_day": {
