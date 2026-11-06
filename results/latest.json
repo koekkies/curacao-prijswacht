@@ -1,5 +1,5 @@
 {
- "scanned_at": "2026-11-06T09:30:59+00:00",
+ "scanned_at": "2026-11-06T10:31:04+00:00",
  "request": {
   "type": "one_way",
   "origin": "CUR",
@@ -16,7 +16,7 @@
   {
    "type": "one_way",
    "price": 544,
-   "price_exact": 543.9699999999999,
+   "price_exact": 543.97,
    "out": "2026-12-31",
    "ret": null,
    "airline": "TUI (tui.nl)",
@@ -53,8 +53,8 @@
   },
   {
    "type": "one_way",
-   "price": 591,
-   "price_total": 2954,
+   "price": 590,
+   "price_total": 2950,
    "pax": 5,
    "out": "2026-12-31",
    "ret": null,
@@ -69,8 +69,8 @@
   },
   {
    "type": "one_way",
-   "price": 591,
-   "price_total": 2954,
+   "price": 590,
+   "price_total": 2950,
    "pax": 5,
    "out": "2026-12-31",
    "ret": null,
@@ -107,7 +107,7 @@
   {
    "type": "one_way",
    "price": 755,
-   "price_total": 3773,
+   "price_total": 3774,
    "pax": 5,
    "out": "2026-12-31",
    "ret": null,
@@ -142,7 +142,7 @@
   {
    "type": "one_way",
    "price": 766,
-   "price_total": 3828,
+   "price_total": 3829,
    "pax": 5,
    "out": "2026-12-31",
    "ret": null,
@@ -157,8 +157,8 @@
   },
   {
    "type": "one_way",
-   "price": 821,
-   "price_total": 4105,
+   "price": 820,
+   "price_total": 4100,
    "pax": 5,
    "out": "2026-12-31",
    "ret": null,
@@ -237,7 +237,7 @@
   {
    "type": "one_way",
    "price": 1115,
-   "price_total": 5575,
+   "price_total": 5576,
    "pax": 5,
    "out": "2026-12-31",
    "ret": null,
@@ -269,7 +269,7 @@
   {
    "type": "one_way",
    "price": 1610,
-   "price_total": 8051,
+   "price_total": 8052,
    "pax": 5,
    "out": "2026-12-31",
    "ret": null,
@@ -285,7 +285,7 @@
   {
    "type": "one_way",
    "price": 1731,
-   "price_total": 8653,
+   "price_total": 8654,
    "pax": 5,
    "out": "2026-12-31",
    "ret": null,
@@ -300,8 +300,8 @@
   },
   {
    "type": "one_way",
-   "price": 3336,
-   "price_total": 16682,
+   "price": 3337,
+   "price_total": 16684,
    "pax": 5,
    "out": "2026-12-31",
    "ret": null,
@@ -319,7 +319,7 @@
   "2026-12-28": 440,
   "2026-12-29": 590,
   "2026-12-30": 590,
-  "2026-12-31": 590,
+  "2026-12-31": 513,
   "2027-01-01": 1100,
   "2027-01-02": 1050,
   "2027-01-03": 940
