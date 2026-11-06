@@ -1,5 +1,5 @@
 {
- "scanned_at": "2026-11-06T05:19:30+00:00",
+ "scanned_at": "2026-11-06T06:19:31+00:00",
  "request": {
   "type": "one_way",
   "origin": "CUR",
@@ -16,7 +16,7 @@
   {
    "type": "one_way",
    "price": 544,
-   "price_exact": 543.9699999999999,
+   "price_exact": 543.97,
    "out": "2026-12-31",
    "ret": null,
    "airline": "TUI (tui.nl)",
@@ -61,8 +61,8 @@
    "airline": "TUI fly Netherlands",
    "direct": true,
    "stops": 0,
-   "dep_time": "17:50",
-   "arr_time": "08:40",
+   "dep_time": "20:35",
+   "arr_time": "11:25",
    "duration": "9u 50m",
    "url": "https://www.google.com/travel/flights?q=One+way+flights+to+AMS+from+CUR+on+2026-12-31+for+2+adults+and+3+children&curr=EUR&hl=en&gl=nl",
    "source": "Google Flights"
@@ -77,8 +77,8 @@
    "airline": "TUI fly Netherlands",
    "direct": true,
    "stops": 0,
-   "dep_time": "20:35",
-   "arr_time": "11:25",
+   "dep_time": "17:50",
+   "arr_time": "08:40",
    "duration": "9u 50m",
    "url": "https://www.google.com/travel/flights?q=One+way+flights+to+AMS+from+CUR+on+2026-12-31+for+2+adults+and+3+children&curr=EUR&hl=en&gl=nl",
    "source": "Google Flights"
@@ -107,7 +107,7 @@
   {
    "type": "one_way",
    "price": 753,
-   "price_total": 3767,
+   "price_total": 3765,
    "pax": 5,
    "out": "2026-12-31",
    "ret": null,
@@ -142,7 +142,7 @@
   {
    "type": "one_way",
    "price": 764,
-   "price_total": 3822,
+   "price_total": 3820,
    "pax": 5,
    "out": "2026-12-31",
    "ret": null,
@@ -237,7 +237,7 @@
   {
    "type": "one_way",
    "price": 1113,
-   "price_total": 5567,
+   "price_total": 5564,
    "pax": 5,
    "out": "2026-12-31",
    "ret": null,
@@ -252,8 +252,8 @@
   },
   {
    "type": "one_way",
-   "price": 1284,
-   "price_total": 6418,
+   "price": 1283,
+   "price_total": 6414,
    "pax": 5,
    "out": "2026-12-31",
    "ret": null,
@@ -268,8 +268,8 @@
   },
   {
    "type": "one_way",
-   "price": 1608,
-   "price_total": 8039,
+   "price": 1607,
+   "price_total": 8035,
    "pax": 5,
    "out": "2026-12-31",
    "ret": null,
@@ -284,8 +284,8 @@
   },
   {
    "type": "one_way",
-   "price": 1728,
-   "price_total": 8640,
+   "price": 1727,
+   "price_total": 8635,
    "pax": 5,
    "out": "2026-12-31",
    "ret": null,
@@ -300,8 +300,8 @@
   },
   {
    "type": "one_way",
-   "price": 3331,
-   "price_total": 16657,
+   "price": 3330,
+   "price_total": 16648,
    "pax": 5,
    "out": "2026-12-31",
    "ret": null,
@@ -317,8 +317,8 @@
  ],
  "tui_per_day": {
   "2026-12-28": 440,
-  "2026-12-29": 513,
-  "2026-12-30": 513,
+  "2026-12-29": 590,
+  "2026-12-30": 590,
   "2026-12-31": 590,
   "2027-01-01": 1100,
   "2027-01-02": 1050,
