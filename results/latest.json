@@ -1,5 +1,5 @@
 {
- "scanned_at": "2026-11-06T13:46:26+00:00",
+ "scanned_at": "2026-11-06T14:46:23+00:00",
  "request": {
   "type": "one_way",
   "origin": "CUR",
@@ -107,22 +107,6 @@
   {
    "type": "one_way",
    "price": 756,
-   "price_total": 3782,
-   "pax": 5,
-   "out": "2026-12-31",
-   "ret": null,
-   "airline": "KLM",
-   "direct": true,
-   "stops": 0,
-   "dep_time": "17:50",
-   "arr_time": "08:00",
-   "duration": "9u 10m",
-   "url": "https://www.google.com/travel/flights?q=One+way+flights+to+AMS+from+CUR+on+2026-12-31+for+2+adults+and+3+children&curr=EUR&hl=en&gl=nl",
-   "source": "Google Flights"
-  },
-  {
-   "type": "one_way",
-   "price": 756,
    "price_exact": 756.03,
    "out": "2026-12-31",
    "ret": null,
@@ -141,8 +125,24 @@
   },
   {
    "type": "one_way",
-   "price": 767,
-   "price_total": 3837,
+   "price": 758,
+   "price_total": 3791,
+   "pax": 5,
+   "out": "2026-12-31",
+   "ret": null,
+   "airline": "KLM",
+   "direct": true,
+   "stops": 0,
+   "dep_time": "17:50",
+   "arr_time": "08:00",
+   "duration": "9u 10m",
+   "url": "https://www.google.com/travel/flights?q=One+way+flights+to+AMS+from+CUR+on+2026-12-31+for+2+adults+and+3+children&curr=EUR&hl=en&gl=nl",
+   "source": "Google Flights"
+  },
+  {
+   "type": "one_way",
+   "price": 769,
+   "price_total": 3846,
    "pax": 5,
    "out": "2026-12-31",
    "ret": null,
@@ -173,8 +173,8 @@
   },
   {
    "type": "one_way",
-   "price": 937,
-   "price_exact": 937.0,
+   "price": 892,
+   "price_exact": 892.0,
    "sold_out": false,
    "out": "2027-01-03",
    "ret": null,
@@ -236,8 +236,8 @@
   },
   {
    "type": "one_way",
-   "price": 1118,
-   "price_total": 5589,
+   "price": 1120,
+   "price_total": 5601,
    "pax": 5,
    "out": "2026-12-31",
    "ret": null,
@@ -252,8 +252,8 @@
   },
   {
    "type": "one_way",
-   "price": 1153,
-   "price_total": 5764,
+   "price": 1155,
+   "price_total": 5776,
    "pax": 5,
    "out": "2026-12-31",
    "ret": null,
@@ -268,8 +268,8 @@
   },
   {
    "type": "one_way",
-   "price": 1614,
-   "price_total": 8071,
+   "price": 1618,
+   "price_total": 8089,
    "pax": 5,
    "out": "2026-12-31",
    "ret": null,
@@ -284,8 +284,8 @@
   },
   {
    "type": "one_way",
-   "price": 1735,
-   "price_total": 8674,
+   "price": 1739,
+   "price_total": 8693,
    "pax": 5,
    "out": "2026-12-31",
    "ret": null,
@@ -300,8 +300,8 @@
   },
   {
    "type": "one_way",
-   "price": 3345,
-   "price_total": 16723,
+   "price": 3352,
+   "price_total": 16760,
    "pax": 5,
    "out": "2026-12-31",
    "ret": null,
@@ -317,18 +317,18 @@
  ],
  "tui_per_day": {
   "2026-12-28": 440,
-  "2026-12-29": 513,
+  "2026-12-29": 590,
   "2026-12-30": 590,
   "2026-12-31": 590,
-  "2027-01-01": 957,
-  "2027-01-02": 1050,
+  "2027-01-01": 1100,
+  "2027-01-02": 913,
   "2027-01-03": 940
  },
  "corendon_per_day": {
   "2026-12-30": 592,
   "2027-01-01": 1078,
   "2027-01-02": 1022,
-  "2027-01-03": 937
+  "2027-01-03": 892
  },
  "klm_per_day": {},
  "log": [
