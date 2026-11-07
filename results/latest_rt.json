@@ -1,5 +1,5 @@
 {
- "scanned_at": "2026-11-07T03:54:04+00:00",
+ "scanned_at": "2026-11-07T04:52:31+00:00",
  "request": {
   "type": "round_trip",
   "out": [
@@ -10,7 +10,7 @@
   "flex": 0,
   "pax": 5
  },
- "count": 13,
+ "count": 17,
  "flights": [
   {
    "type": "round_trip",
@@ -97,6 +97,22 @@
    "price": 826,
    "price_total": 4128,
    "pax": 5,
+   "out": "2026-12-17",
+   "ret": "2026-12-31",
+   "airline": "KLM",
+   "direct": true,
+   "stops": 0,
+   "dep_time": "20:50",
+   "arr_time": "10:50",
+   "duration": "9u",
+   "url": "https://www.google.com/travel/flights?q=Flights+to+AMS+from+CUR+on+2026-12-17+through+2026-12-31+for+2+adults+and+3+children&curr=EUR&hl=en&gl=nl",
+   "source": "Google Flights"
+  },
+  {
+   "type": "round_trip",
+   "price": 826,
+   "price_total": 4128,
+   "pax": 5,
    "out": "2026-12-18",
    "ret": "2026-12-31",
    "airline": "KLM",
@@ -174,8 +190,8 @@
   },
   {
    "type": "round_trip",
-   "price": 1740,
-   "price_total": 8698,
+   "price": 1785,
+   "price_total": 8926,
    "pax": 5,
    "out": "2026-12-18",
    "ret": "2026-12-31",
@@ -206,6 +222,54 @@
   },
   {
    "type": "round_trip",
+   "price": 4600,
+   "price_total": 22999,
+   "pax": 5,
+   "out": "2026-12-17",
+   "ret": "2026-12-31",
+   "airline": "American, British Airways",
+   "direct": false,
+   "stops": 2,
+   "dep_time": "17:42",
+   "arr_time": "16:10",
+   "duration": "17u 28m",
+   "url": "https://www.google.com/travel/flights?q=Flights+to+AMS+from+CUR+on+2026-12-17+through+2026-12-31+for+2+adults+and+3+children&curr=EUR&hl=en&gl=nl",
+   "source": "Google Flights"
+  },
+  {
+   "type": "round_trip",
+   "price": 6193,
+   "price_total": 30966,
+   "pax": 5,
+   "out": "2026-12-17",
+   "ret": "2026-12-31",
+   "airline": "COPA, United",
+   "direct": false,
+   "stops": 2,
+   "dep_time": "13:17",
+   "arr_time": "07:15",
+   "duration": "36u 58m",
+   "url": "https://www.google.com/travel/flights?q=Flights+to+AMS+from+CUR+on+2026-12-17+through+2026-12-31+for+2+adults+and+3+children&curr=EUR&hl=en&gl=nl",
+   "source": "Google Flights"
+  },
+  {
+   "type": "round_trip",
+   "price": 6661,
+   "price_total": 33304,
+   "pax": 5,
+   "out": "2026-12-17",
+   "ret": "2026-12-31",
+   "airline": "COPA, KLM",
+   "direct": false,
+   "stops": 1,
+   "dep_time": "15:37",
+   "arr_time": "11:10",
+   "duration": "14u 33m",
+   "url": "https://www.google.com/travel/flights?q=Flights+to+AMS+from+CUR+on+2026-12-17+through+2026-12-31+for+2+adults+and+3+children&curr=EUR&hl=en&gl=nl",
+   "source": "Google Flights"
+  },
+  {
+   "type": "round_trip",
    "price": 6775,
    "price_total": 33873,
    "pax": 5,
@@ -223,20 +287,20 @@
  ],
  "tui_per_day": {
   "2026-12-14": 220,
-  "2026-12-15": 220,
-  "2026-12-16": 191,
+  "2026-12-15": 191,
+  "2026-12-16": 220,
   "2026-12-17": 191,
-  "2026-12-18": 450,
+  "2026-12-18": 391,
   "2026-12-19": 285,
-  "2026-12-20": 191,
+  "2026-12-20": 220,
   "2026-12-21": 220,
-  "2026-12-28": 470,
-  "2026-12-29": 490,
+  "2026-12-28": 540,
+  "2026-12-29": 426,
   "2026-12-30": 520,
   "2026-12-31": 340,
   "2027-01-01": 410,
-  "2027-01-02": 430,
-  "2027-01-03": 409
+  "2027-01-02": 374,
+  "2027-01-03": 450
  },
  "corendon_per_day": {
   "2026-12-16": 292,
@@ -246,7 +310,7 @@
  },
  "klm_per_day": {},
  "log": [
-  "[2026-12-17 → 2026-12-31] 2026-12-17 → 2026-12-31: 5 vluchten",
+  "[2026-12-17 → 2026-12-31] 2026-12-17 → 2026-12-31: 9 vluchten",
   "[2026-12-17 → 2026-12-31] TUI 2026-12-17 → 2026-12-31: 6 vluchten",
   "[2026-12-17 → 2026-12-31] Corendon.com curacao→amsterdam rond 2026-12-17: 4 vlucht(en)",
   "[2026-12-17 → 2026-12-31] Corendon.com amsterdam→curacao rond 2026-12-31: 4 vlucht(en)",
