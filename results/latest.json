@@ -1,5 +1,5 @@
 {
- "scanned_at": "2026-11-07T00:32:11+00:00",
+ "scanned_at": "2026-11-07T01:29:31+00:00",
  "request": {
   "type": "one_way",
   "origin": "CUR",
@@ -11,7 +11,7 @@
   "adults": 2,
   "children": 3
  },
- "count": 13,
+ "count": 17,
  "flights": [
   {
    "type": "one_way",
@@ -85,6 +85,27 @@
   },
   {
    "type": "one_way",
+   "price": 592,
+   "price_exact": 592.0,
+   "sold_out": false,
+   "out": "2026-12-30",
+   "ret": null,
+   "airline": "Corendon (corendon.com)",
+   "direct": true,
+   "stops": 0,
+   "via": "",
+   "dep_time": "20:45",
+   "arr_time": "11:30",
+   "duration": "",
+   "flight_no": "",
+   "seats_left": null,
+   "availability": "",
+   "pax": 5,
+   "url": "https://www.corendon.com/nl/flights/curacao/amsterdam/20261231?passenger=5&infant=0",
+   "source": "Corendon.com"
+  },
+  {
+   "type": "one_way",
    "price": 756,
    "price_exact": 756.03,
    "out": "2026-12-31",
@@ -149,6 +170,69 @@
    "duration": "9u 50m",
    "url": "https://www.google.com/travel/flights?q=One+way+flights+to+AMS+from+CUR+on+2026-12-31+for+2+adults+and+3+children&curr=EUR&hl=en&gl=nl",
    "source": "Google Flights"
+  },
+  {
+   "type": "one_way",
+   "price": 892,
+   "price_exact": 892.0,
+   "sold_out": false,
+   "out": "2027-01-03",
+   "ret": null,
+   "airline": "Corendon (corendon.com)",
+   "direct": true,
+   "stops": 0,
+   "via": "",
+   "dep_time": "21:45",
+   "arr_time": "12:30",
+   "duration": "",
+   "flight_no": "",
+   "seats_left": null,
+   "availability": "",
+   "pax": 5,
+   "url": "https://www.corendon.com/nl/flights/curacao/amsterdam/20261231?passenger=5&infant=0",
+   "source": "Corendon.com"
+  },
+  {
+   "type": "one_way",
+   "price": 1022,
+   "price_exact": 1022.0,
+   "sold_out": false,
+   "out": "2027-01-02",
+   "ret": null,
+   "airline": "Corendon (corendon.com)",
+   "direct": true,
+   "stops": 0,
+   "via": "",
+   "dep_time": "20:45",
+   "arr_time": "11:30",
+   "duration": "",
+   "flight_no": "",
+   "seats_left": null,
+   "availability": "",
+   "pax": 5,
+   "url": "https://www.corendon.com/nl/flights/curacao/amsterdam/20261231?passenger=5&infant=0",
+   "source": "Corendon.com"
+  },
+  {
+   "type": "one_way",
+   "price": 1078,
+   "price_exact": 1078.0,
+   "sold_out": false,
+   "out": "2027-01-01",
+   "ret": null,
+   "airline": "Corendon (corendon.com)",
+   "direct": true,
+   "stops": 0,
+   "via": "",
+   "dep_time": "20:45",
+   "arr_time": "11:30",
+   "duration": "",
+   "flight_no": "",
+   "seats_left": null,
+   "availability": "beperkt aantal stoelen",
+   "pax": 5,
+   "url": "https://www.corendon.com/nl/flights/curacao/amsterdam/20261231?passenger=5&infant=0",
+   "source": "Corendon.com"
   },
   {
    "type": "one_way",
@@ -240,12 +324,17 @@
   "2027-01-02": 1050,
   "2027-01-03": 940
  },
- "corendon_per_day": {},
+ "corendon_per_day": {
+  "2026-12-30": 592,
+  "2027-01-01": 1078,
+  "2027-01-02": 1022,
+  "2027-01-03": 892
+ },
  "klm_per_day": {},
  "log": [
   "2026-12-31 : 10 vluchten",
   "TUI 2026-12-31: 3 vluchten",
-  "Corendon.com curacao→amsterdam rond 2026-12-31: 0 vlucht(en)",
+  "Corendon.com curacao→amsterdam rond 2026-12-31: 4 vlucht(en)",
   "KLM 2026-12-31: 0 vluchten (geen antwoord van KLM)"
  ]
 }
