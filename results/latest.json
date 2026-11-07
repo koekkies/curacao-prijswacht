@@ -1,5 +1,5 @@
 {
- "scanned_at": "2026-11-07T17:27:53+00:00",
+ "scanned_at": "2026-11-07T18:27:42+00:00",
  "request": {
   "type": "one_way",
   "origin": "CUR",
@@ -16,7 +16,7 @@
   {
    "type": "one_way",
    "price": 544,
-   "price_exact": 543.97,
+   "price_exact": 543.9699999999999,
    "out": "2026-12-31",
    "ret": null,
    "airline": "TUI (tui.nl)",
@@ -35,7 +35,7 @@
   {
    "type": "one_way",
    "price": 544,
-   "price_exact": 543.9699999999999,
+   "price_exact": 543.97,
    "out": "2026-12-31",
    "ret": null,
    "airline": "TUI (tui.nl)",
@@ -134,7 +134,7 @@
    "arr_time": "07:30",
    "duration": "9u 50m",
    "flight_no": "OR391",
-   "seats_left": 10,
+   "seats_left": 6,
    "url": "https://www.tui.nl/flight/nl/search?flyingFrom%5B%5D=CUR&flyingTo%5B%5D=AMS&depDate=2026-12-31&adults=2&children=3&childAge=3%2C6%2C9&choiceSearch=true&searchType=pricegrid&nearByAirports=true&currency=EUR&isOneWay=true",
    "source": "TUI.nl",
    "pax": null
@@ -336,7 +336,7 @@
   "2026-12-29": 590,
   "2026-12-30": 590,
   "2026-12-31": 590,
-  "2027-01-01": 1000,
+  "2027-01-01": 957,
   "2027-01-02": 1050,
   "2027-01-03": 940
  },
