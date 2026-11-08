@@ -1,5 +1,5 @@
 {
- "scanned_at": "2026-11-08T14:41:01+00:00",
+ "scanned_at": "2026-11-08T15:41:04+00:00",
  "request": {
   "type": "one_way",
   "origin": "CUR",
@@ -35,7 +35,7 @@
   {
    "type": "one_way",
    "price": 544,
-   "price_exact": 543.9699999999999,
+   "price_exact": 543.97,
    "out": "2026-12-31",
    "ret": null,
    "airline": "TUI (tui.nl)",
