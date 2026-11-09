@@ -1,5 +1,5 @@
 {
- "scanned_at": "2026-11-09T19:21:54+00:00",
+ "scanned_at": "2026-11-09T20:21:48+00:00",
  "request": {
   "type": "one_way",
   "origin": "CUR",
@@ -15,8 +15,8 @@
  "flights": [
   {
    "type": "one_way",
-   "price": 415,
-   "price_exact": 414.89,
+   "price": 396,
+   "price_exact": 396.45,
    "out": "2026-12-31",
    "ret": null,
    "airline": "TUI (tui.nl)",
@@ -27,10 +27,26 @@
    "arr_time": "11:25",
    "duration": "9u 50m",
    "flight_no": "OR372",
-   "seats_left": 9,
+   "seats_left": 10,
    "url": "https://www.tui.nl/flight/nl/search?flyingFrom%5B%5D=CUR&flyingTo%5B%5D=AMS&depDate=2026-12-31&adults=2&children=3&childAge=3%2C6%2C9&choiceSearch=true&searchType=pricegrid&nearByAirports=true&currency=EUR&isOneWay=true",
    "source": "TUI.nl",
    "pax": null
+  },
+  {
+   "type": "one_way",
+   "price": 430,
+   "price_total": 2150,
+   "pax": 5,
+   "out": "2026-12-31",
+   "ret": null,
+   "airline": "TUI fly Netherlands",
+   "direct": true,
+   "stops": 0,
+   "dep_time": "20:35",
+   "arr_time": "11:25",
+   "duration": "9u 50m",
+   "url": "https://www.google.com/travel/flights?q=One+way+flights+to+AMS+from+CUR+on+2026-12-31+for+2+adults+and+3+children&curr=EUR&hl=en&gl=nl",
+   "source": "Google Flights"
   },
   {
    "type": "one_way",
@@ -50,22 +66,6 @@
    "url": "https://www.tui.nl/flight/nl/search?flyingFrom%5B%5D=CUR&flyingTo%5B%5D=AMS&depDate=2026-12-31&adults=2&children=3&childAge=3%2C6%2C9&choiceSearch=true&searchType=pricegrid&nearByAirports=true&currency=EUR&isOneWay=true",
    "source": "TUI.nl",
    "pax": null
-  },
-  {
-   "type": "one_way",
-   "price": 450,
-   "price_total": 2250,
-   "pax": 5,
-   "out": "2026-12-31",
-   "ret": null,
-   "airline": "TUI fly Netherlands",
-   "direct": true,
-   "stops": 0,
-   "dep_time": "20:35",
-   "arr_time": "11:25",
-   "duration": "9u 50m",
-   "url": "https://www.google.com/travel/flights?q=One+way+flights+to+AMS+from+CUR+on+2026-12-31+for+2+adults+and+3+children&curr=EUR&hl=en&gl=nl",
-   "source": "Google Flights"
   },
   {
    "type": "one_way",
@@ -118,7 +118,7 @@
    "arr_time": "07:30",
    "duration": "9u 50m",
    "flight_no": "OR391",
-   "seats_left": 8,
+   "seats_left": 10,
    "url": "https://www.tui.nl/flight/nl/search?flyingFrom%5B%5D=CUR&flyingTo%5B%5D=AMS&depDate=2026-12-31&adults=2&children=3&childAge=3%2C6%2C9&choiceSearch=true&searchType=pricegrid&nearByAirports=true&currency=EUR&isOneWay=true",
    "source": "TUI.nl",
    "pax": null
@@ -141,8 +141,8 @@
   },
   {
    "type": "one_way",
-   "price": 754,
-   "price_total": 3768,
+   "price": 753,
+   "price_total": 3767,
    "pax": 5,
    "out": "2026-12-31",
    "ret": null,
@@ -157,8 +157,8 @@
   },
   {
    "type": "one_way",
-   "price": 765,
-   "price_total": 3823,
+   "price": 764,
+   "price_total": 3822,
    "pax": 5,
    "out": "2026-12-31",
    "ret": null,
@@ -216,7 +216,7 @@
   {
    "type": "one_way",
    "price": 1077,
-   "price_total": 5384,
+   "price_total": 5383,
    "pax": 5,
    "out": "2026-12-31",
    "ret": null,
@@ -253,7 +253,7 @@
   {
    "type": "one_way",
    "price": 1113,
-   "price_total": 5567,
+   "price_total": 5566,
    "pax": 5,
    "out": "2026-12-31",
    "ret": null,
@@ -269,7 +269,7 @@
   {
    "type": "one_way",
    "price": 1148,
-   "price_total": 5742,
+   "price_total": 5741,
    "pax": 5,
    "out": "2026-12-31",
    "ret": null,
@@ -284,8 +284,8 @@
   },
   {
    "type": "one_way",
-   "price": 1509,
-   "price_total": 7543,
+   "price": 1728,
+   "price_total": 8640,
    "pax": 5,
    "out": "2026-12-31",
    "ret": null,
@@ -300,8 +300,8 @@
   },
   {
    "type": "one_way",
-   "price": 3332,
-   "price_total": 16660,
+   "price": 3331,
+   "price_total": 16657,
    "pax": 5,
    "out": "2026-12-31",
    "ret": null,
@@ -319,10 +319,10 @@
   "2026-12-28": 370,
   "2026-12-29": 470,
   "2026-12-30": 409,
-  "2026-12-31": 450,
-  "2027-01-01": 913,
-  "2027-01-02": 1000,
-  "2027-01-03": 957
+  "2026-12-31": 430,
+  "2027-01-01": 1050,
+  "2027-01-02": 870,
+  "2027-01-03": 913
  },
  "corendon_per_day": {
   "2026-12-30": 557,
