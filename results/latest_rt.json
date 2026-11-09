@@ -1,5 +1,5 @@
 {
- "scanned_at": "2026-11-09T22:31:44+00:00",
+ "scanned_at": "2026-11-09T23:32:14+00:00",
  "request": {
   "type": "round_trip",
   "out": [
@@ -79,7 +79,7 @@
   {
    "type": "round_trip",
    "price": 1211,
-   "price_total": 6057,
+   "price_total": 6056,
    "pax": 5,
    "out": "2026-12-18",
    "ret": "2026-12-31",
@@ -94,24 +94,8 @@
   },
   {
    "type": "round_trip",
-   "price": 1774,
-   "price_total": 8868,
-   "pax": 5,
-   "out": "2026-12-18",
-   "ret": "2026-12-31",
-   "airline": "COPA, Iberia",
-   "direct": false,
-   "stops": 2,
-   "dep_time": "13:17",
-   "arr_time": "18:55",
-   "duration": "24u 38m",
-   "url": "https://www.google.com/travel/flights?q=Flights+to+AMS+from+CUR+on+2026-12-18+through+2026-12-31+for+2+adults+and+3+children&curr=EUR&hl=en&gl=nl",
-   "source": "Google Flights"
-  },
-  {
-   "type": "round_trip",
    "price": 2368,
-   "price_total": 11841,
+   "price_total": 11839,
    "pax": 5,
    "out": "2026-12-18",
    "ret": "2026-12-31",
@@ -126,8 +110,24 @@
   },
   {
    "type": "round_trip",
-   "price": 6617,
-   "price_total": 33087,
+   "price": 2672,
+   "price_total": 13360,
+   "pax": 5,
+   "out": "2026-12-18",
+   "ret": "2026-12-31",
+   "airline": "American, British Airways",
+   "direct": false,
+   "stops": 2,
+   "dep_time": "17:24",
+   "arr_time": "15:15",
+   "duration": "16u 51m",
+   "url": "https://www.google.com/travel/flights?q=Flights+to+AMS+from+CUR+on+2026-12-18+through+2026-12-31+for+2+adults+and+3+children&curr=EUR&hl=en&gl=nl",
+   "source": "Google Flights"
+  },
+  {
+   "type": "round_trip",
+   "price": 6616,
+   "price_total": 33082,
    "pax": 5,
    "out": "2026-12-18",
    "ret": "2026-12-31",
@@ -143,20 +143,20 @@
  ],
  "tui_per_day": {
   "2026-12-14": 210,
-  "2026-12-15": 210,
+  "2026-12-15": 183,
   "2026-12-16": 210,
-  "2026-12-17": 183,
+  "2026-12-17": 210,
   "2026-12-18": 380,
   "2026-12-19": 295,
-  "2026-12-20": 187,
+  "2026-12-20": 215,
   "2026-12-21": 210,
   "2026-12-28": 470,
   "2026-12-29": 490,
   "2026-12-30": 470,
   "2026-12-31": 340,
   "2027-01-01": 390,
-  "2027-01-02": 430,
-  "2027-01-03": 357
+  "2027-01-02": 374,
+  "2027-01-03": 410
  },
  "corendon_per_day": {
   "2026-12-16": 292,
