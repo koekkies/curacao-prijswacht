@@ -1,5 +1,5 @@
 {
- "scanned_at": "2026-11-09T18:06:43+00:00",
+ "scanned_at": "2026-11-09T19:06:47+00:00",
  "request": {
   "type": "one_way",
   "origin": "CUR",
@@ -15,8 +15,27 @@
  "flights": [
   {
    "type": "one_way",
+   "price": 415,
+   "price_exact": 414.89,
+   "out": "2026-12-31",
+   "ret": null,
+   "airline": "TUI (tui.nl)",
+   "direct": true,
+   "stops": 0,
+   "via": "Amsterdam",
+   "dep_time": "20:35",
+   "arr_time": "11:25",
+   "duration": "9u 50m",
+   "flight_no": "OR372",
+   "seats_left": 10,
+   "url": "https://www.tui.nl/flight/nl/search?flyingFrom%5B%5D=CUR&flyingTo%5B%5D=AMS&depDate=2026-12-31&adults=2&children=3&childAge=3%2C6%2C9&choiceSearch=true&searchType=pricegrid&nearByAirports=true&currency=EUR&isOneWay=true",
+   "source": "TUI.nl",
+   "pax": null
+  },
+  {
+   "type": "one_way",
    "price": 433,
-   "price_exact": 433.33000000000004,
+   "price_exact": 433.3299999999999,
    "out": "2026-12-31",
    "ret": null,
    "airline": "TUI (tui.nl)",
@@ -34,22 +53,19 @@
   },
   {
    "type": "one_way",
-   "price": 433,
-   "price_exact": 433.33000000000004,
+   "price": 450,
+   "price_total": 2250,
+   "pax": 5,
    "out": "2026-12-31",
    "ret": null,
-   "airline": "TUI (tui.nl)",
+   "airline": "TUI fly Netherlands",
    "direct": true,
    "stops": 0,
-   "via": "Amsterdam",
    "dep_time": "20:35",
    "arr_time": "11:25",
    "duration": "9u 50m",
-   "flight_no": "OR372",
-   "seats_left": 8,
-   "url": "https://www.tui.nl/flight/nl/search?flyingFrom%5B%5D=CUR&flyingTo%5B%5D=AMS&depDate=2026-12-31&adults=2&children=3&childAge=3%2C6%2C9&choiceSearch=true&searchType=pricegrid&nearByAirports=true&currency=EUR&isOneWay=true",
-   "source": "TUI.nl",
-   "pax": null
+   "url": "https://www.google.com/travel/flights?q=One+way+flights+to+AMS+from+CUR+on+2026-12-31+for+2+adults+and+3+children&curr=EUR&hl=en&gl=nl",
+   "source": "Google Flights"
   },
   {
    "type": "one_way",
@@ -69,24 +85,8 @@
   },
   {
    "type": "one_way",
-   "price": 470,
-   "price_total": 2350,
-   "pax": 5,
-   "out": "2026-12-31",
-   "ret": null,
-   "airline": "TUI fly Netherlands",
-   "direct": true,
-   "stops": 0,
-   "dep_time": "20:35",
-   "arr_time": "11:25",
-   "duration": "9u 50m",
-   "url": "https://www.google.com/travel/flights?q=One+way+flights+to+AMS+from+CUR+on+2026-12-31+for+2+adults+and+3+children&curr=EUR&hl=en&gl=nl",
-   "source": "Google Flights"
-  },
-  {
-   "type": "one_way",
-   "price": 592,
-   "price_exact": 592.0,
+   "price": 557,
+   "price_exact": 557.0,
    "sold_out": false,
    "out": "2026-12-30",
    "ret": null,
@@ -118,7 +118,7 @@
    "arr_time": "07:30",
    "duration": "9u 50m",
    "flight_no": "OR391",
-   "seats_left": 10,
+   "seats_left": 8,
    "url": "https://www.tui.nl/flight/nl/search?flyingFrom%5B%5D=CUR&flyingTo%5B%5D=AMS&depDate=2026-12-31&adults=2&children=3&childAge=3%2C6%2C9&choiceSearch=true&searchType=pricegrid&nearByAirports=true&currency=EUR&isOneWay=true",
    "source": "TUI.nl",
    "pax": null
@@ -252,8 +252,8 @@
   },
   {
    "type": "one_way",
-   "price": 1114,
-   "price_total": 5568,
+   "price": 1113,
+   "price_total": 5567,
    "pax": 5,
    "out": "2026-12-31",
    "ret": null,
@@ -285,7 +285,7 @@
   {
    "type": "one_way",
    "price": 1509,
-   "price_total": 7544,
+   "price_total": 7543,
    "pax": 5,
    "out": "2026-12-31",
    "ret": null,
@@ -301,7 +301,7 @@
   {
    "type": "one_way",
    "price": 3332,
-   "price_total": 16661,
+   "price_total": 16660,
    "pax": 5,
    "out": "2026-12-31",
    "ret": null,
@@ -319,13 +319,13 @@
   "2026-12-28": 370,
   "2026-12-29": 470,
   "2026-12-30": 470,
-  "2026-12-31": 470,
+  "2026-12-31": 409,
   "2027-01-01": 1050,
   "2027-01-02": 1000,
-  "2027-01-03": 1050
+  "2027-01-03": 957
  },
  "corendon_per_day": {
-  "2026-12-30": 592,
+  "2026-12-30": 557,
   "2027-01-01": 1078,
   "2027-01-02": 1022,
   "2027-01-03": 892
